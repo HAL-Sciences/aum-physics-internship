@@ -38,4 +38,4 @@ experiment/
 - **When stuck:** try it yourself → ask an AI for a *hint* → ask Gaurav → ask your
   dad. Being stuck a little while is normal and good — it's where the learning is.
 
-Let's find out whether a machine can discover what it was never taught.
+Let's find out whether a machine can discover what it was never taught!
