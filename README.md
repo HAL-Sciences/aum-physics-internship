@@ -6,7 +6,12 @@ résumé.
 
 ## Start here
 
-1. Open **[`handouts/intern/HANDOUT.md`](handouts/intern/HANDOUT.md)** — your
+0. **New to coding? Start with
+   [`handouts/intern/getting_started.md`](handouts/intern/getting_started.md)** —
+   it installs your tools and walks you to your first commit. Do it once, with
+   Gaurav or your dad. Any word you don't know is in
+   [`handouts/intern/glossary.md`](handouts/intern/glossary.md).
+1. Then open **[`handouts/intern/HANDOUT.md`](handouts/intern/HANDOUT.md)** — your
    front-door guide to the whole internship. Read it once now, and come back
    whenever you're not sure what to do next.
 2. It links out to the deeper guides for each part: building the rig, learning
