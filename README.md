@@ -8,24 +8,24 @@ résumé.
 
 0. **New to coding? Start with
    [`handouts/intern/getting_started.md`](handouts/intern/getting_started.md)** —
-   it installs your tools and walks you to your first commit. Do it once, with
-   Gaurav or your dad. Any word you don't know is in
+   it installs your tools and walks you to your first commit. Do it once, with your
+   dad. Any word you don't know is in
    [`handouts/intern/glossary.md`](handouts/intern/glossary.md).
 1. Then open **[`handouts/intern/HANDOUT.md`](handouts/intern/HANDOUT.md)** — your
    front-door guide to the whole internship. Read it once now, and come back
    whenever you're not sure what to do next.
-2. It links out to the deeper guides for each part: building the rig, learning
-   Python, testing the AIs, and writing it all up.
+2. It points you to deeper guides for each part as you reach them — building the
+   rig, learning Python, testing the AIs, and writing it all up.
 
 ## What's in here
 
 ```
 handouts/
   intern/     your guides — start with HANDOUT.md
-  shared/     templates you fill in (data dictionary, prompt log, eval matrix, …)
 experiment/
   src/        where YOU write your Python analysis code (starts empty — it's yours)
   data/       where your Tracker CSV files go (keep raw exports; never edit them)
+notes/        your research notebook lives here
 ```
 
 ## How we work
