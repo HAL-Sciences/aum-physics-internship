@@ -13,12 +13,12 @@ def rectangle (width, height):
 
 # This will result in an area of 6 and perimeter of 10
 rectangle1=rectangle(3,2)
-print("(area, perimeter) for rectanlge 1 is "+str(rectangle1))
+print("(area, perimeter) for rectangle 1 is "+str(rectangle1))
 
 # This will result in an area of 90 and a perimeter of 38
 rectangle2=rectangle(height=10, width=9)
-print("(area, perimeter) for rectanlge 2 is "+str(rectangle2))
+print("(area, perimeter) for rectangle 2 is "+str(rectangle2))
 
 # This will result in an area of 0.125 and a perimeter of 1.5
 rectangle3=rectangle(1/2,1/4)
-print("(area, perimeter) for rectanlge 3 is "+str(rectangle3))
+print("(area, perimeter) for rectangle 3 is "+str(rectangle3))
