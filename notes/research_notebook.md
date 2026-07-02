@@ -55,3 +55,23 @@ Format
 
 **Next step:** Complete my assignments on Wednesday.
 ```
+
+```
+### July 1 — Learning functions
+
+**Goal today:** Today's goal was to learn and apply functions.
+
+**What I tried:** The main thing I did was learning, but I also created a function that calculates the area and perimeter of a rectangle
+
+**What worked:** I was able to create rectangles and print out the area and perimeter using the str() command.
+
+**What failed / surprised me:** I was struggling to find a way to neatly print out the area and perimeter, but settled on just using the coordinate-like output.
+
+
+
+**Data / files I created:** more_basics.py, internship folder
+
+**Questions for Gaurav:** None
+
+**Next step:** Set up for the actual experiment.
+```
