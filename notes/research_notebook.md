@@ -36,6 +36,7 @@ Format
 
 **Next step:** Begin learning to code and pushing my files to github.
 ```
+
 ```
 ### June 30 — Basics of coding
 
@@ -74,4 +75,25 @@ Format
 **Questions for Gaurav:** None
 
 **Next step:** Set up for the actual experiment.
+```
+
+```
+### July 2 — Practice run
+
+**Goal today:** Install tracker and do a practice run of the experiment with house keys and a rubber band.
+
+**Predictions:** Over time the bounces will die out due to drag forces. Theoretically, I believe objects with lower masses will experience their bounces dying out faster. They will have to traverse through more air due to moving faster (because T=2pisqrt(m/k)). I also feel like ive seen a similar things happen with pendulums dying out based on string length, which should be the equivalent to mass according to the equations for simple harmonic motion. Additionally, I think the paddles will accelerate the dying out of the bounces because they also catch air.
+
+**What I tried:** I took a loop of keys and tied a rubber band around them such that if the keys moved at all, so would the band, and vice versa. I then put the rubber band on a ring stand and pulled a key while recording.
+
+**What worked:** After a few attempts, I was able to successfully get the keys to move following harmonic motion.
+
+**What failed / surprised me:** At first, after the first bounce the keys would immediately freeze. I think this was due to the keys going so high that the rubber band no longer had tension, making the elastic potential energy fall to 0, completely ruining the motion. 
+
+**What I changed:** I realized adding more mass should work as that would pull the rubber band down, meaning after moving a bit, there would still be tension. Adding more keys did the trick.
+
+**Data / files I created:** Keys_test_run.MOV, internship folder
+(filenames, where they live)
+
+**Next step:** Assignments for Friday and using the tracker
 ```
