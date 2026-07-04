@@ -97,3 +97,21 @@ Format
 
 **Next step:** Assignments for Friday and using the tracker
 ```
+
+```
+### July 3 — First Run of Tracker
+
+**Goal today:** Using tracker to see what happens as the from yesterday keys bounce
+
+**Predictions:** I predict that the height of the keys over time will move in a sinusoidal motion, that is diminishing. Over time, both the low and high points will be brought closer to 0, yet theoretically the period will remain consistent. Eventually the bounces will seem more stable when the keys switch to a more pendulum-like motion rather than up and down bounces. I predict it will take roughly 15 bounces for this to happen.
+
+**Results:** The keys bounced roughly 10 times before the motion became minimal, but seemed to even have some motion up to 20 bounces. I thought that the motion by the time of 10 bounces is roughly what would be seen at 15, though, so I was incorrect on my prediction in that.
+
+**What failed / surprised me:** The data was surprisingly clean, up until around after 10 bounces. I also noticed while doing the tracking that later on, the keys started moving left and right in the frame, rather than just up and down. This does support my hypothesis that the keys would move more like a pendulum, as I noticed in real life during the recording. The data also got messier around this time. 
+
+**What I would change for next time:** During the real run, I will need to make the ruler more level in the plane, and I should try to ensure the spring cant swing side to side. This is both to prevent a switch to more pendulum-like motion, which would mess up energy calculations as the amount the spring is stretched would be higher and mess with the results. I also saw the keys rotate. I don't think this would happen with a spring, but either way I should try to insure the massses are connected in a way that prevents rotation from happening as that transfers some energy and may mess with the calculations
+
+**Data / files I created:** Tracker_First_Run_Data.csv and Tracker_First_Run_Graph.pdf, internship folder
+
+```
+
