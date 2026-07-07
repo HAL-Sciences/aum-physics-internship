@@ -115,3 +115,13 @@ Format
 
 ```
 
+```
+### July 6 — Control Flow
+
+**Goal today:** Go through the control flow lesson in codecadamey and push a project to the repo.
+
+**What worked:** I was able to get through the lesson with no problems
+
+**What surprised me:** I noticed you could input multiple checks into an expression, though I didnt use this. (For example, you could put "if 10 >= age >= 20:" and it would work)
+```
+
