@@ -125,3 +125,13 @@ Format
 **What surprised me:** I noticed you could input multiple checks into an expression, though I didnt use this. (For example, you could put "if 10 >= age >= 20:" and it would work)
 ```
 
+```
+### July 7 — Basics of Lists
+
+**Goal today:** Learning the basics of using lists
+
+**What surprised me:** I was a little surprised by the using 2D lists, but I got the hang of it pretty quickly.
+
+**Data / files I created:** I moved all the coding practice to a new folder called Learning Coding and Practice. I also created list_basics.py
+```
+

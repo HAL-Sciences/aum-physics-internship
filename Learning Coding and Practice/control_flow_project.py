@@ -1,4 +1,6 @@
 weight = 41.5 # In pounds
+# with weight 4.8, it is cheapest to do regular ground shipping with a cost of 34.4
+# with weight 41.5, it is cheapest to do premium ground shipping with a cost of 125.0
 
 # Ground Shipping
 if weight <= 2:
@@ -36,4 +38,4 @@ else:
 # elif drone_shipping_cost <= ground_shipping_cost and drone_shipping_cost <= premium_ground_shipping_cost:
     # print("It would be cheapest to ship with drone shipping!")
 # else:
-    # print("You should ship this with premium ground shipping!")
+    # print("You should ship this with premium ground shipping!")  
