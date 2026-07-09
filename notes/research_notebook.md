@@ -135,3 +135,18 @@ Format
 **Data / files I created:** I moved all the coding practice to a new folder called Learning Coding and Practice. I also created list_basics.py
 ```
 
+```
+### July 8 — Finishing lists and Data
+
+**Goal today:** Learning more about using lists in python, but also working with the data for my first tracker run.
+
+**Spreadsheet notes:** I noticed in the data that each points contained 3 pieces of information, but for a lot of points only one piece of information was present. This is confusing, but I think what happened was that the data included every frame, but not points as I did not actually use the tracker for those frames. This makes the data messier and in need of cleaning. Its still possible to follow, but it does bury the bulk of the actually relevant information. Removing those points would help. Also, a lot of the points I did put data for look random in the spreadsheet. Some of them are just super far from other data points. Perhaps some of those should also be removed to make it easier to work with.
+
+**What I tried:** It took me a bit to understand it, but eventually I made a python file to run code involving my first tracker run.
+
+**What worked:** I successfully imported pandas, and was able to eventually get my code working. I also had no issues with finding the file path as right clicking the file in vs code let me copy the path. I had no issues with learning how to use lists.
+
+**What failed / surprised me:** It took me a few attempts to get my code working, but I realized I missed some quotation mark and I got it to work.
+
+**Data / files I created:** tracker_first_run.py, internship folder.
+```
