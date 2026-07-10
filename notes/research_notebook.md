@@ -150,3 +150,16 @@ Format
 
 **Data / files I created:** tracker_first_run.py, internship folder.
 ```
+
+```
+### July 9 — Learning Loops
+
+**Goal today:** Complete the Codecadamey loops lesson and find the max height of the keys on my first tracker run
+
+**What worked:** I had no problems creating a function to convert from centimeters to meters nor with printing. It took a bit of time to get the code to find the max height working, but I eventually got it to work. 
+
+**What failed / surprised me:** I struggled a bit to get the max value for the data file. When using the function initially, it was printing the max values for every column, but eventually I figured out how to limit to only the column I needed with enough research.
+
+**What I changed:** I updated tracker_first_run.py as mentioned above.
+```
+
