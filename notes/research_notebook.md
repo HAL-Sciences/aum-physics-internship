@@ -163,3 +163,11 @@ Format
 **What I changed:** I updated tracker_first_run.py as mentioned above.
 ```
 
+```
+### July 10 — Plotting Data 
+
+**Goal today:** Using matplotlib to plot my data
+
+**What worked:** I imported matplotlib with no issues. It took a few minutes of researching, but eventually I found the information I needed to plot my data. It was a much quicker process today than trying to get function code during the previous days. There is not much to comment on today as it was only a few lines of code. I did notice that I find it easiest to get my code from websites that specifically tackle the problem I have, such as using matplotlib to read python columns. Google's overviews may not always understand the question nor how to answer it, and stack overflow typically has more complicated questions that contain information that doesn't actually help me.
+```
+
