@@ -171,3 +171,14 @@ Format
 **What worked:** I imported matplotlib with no issues. It took a few minutes of researching, but eventually I found the information I needed to plot my data. It was a much quicker process today than trying to get function code during the previous days. There is not much to comment on today as it was only a few lines of code. I did notice that I find it easiest to get my code from websites that specifically tackle the problem I have, such as using matplotlib to read python columns. Google's overviews may not always understand the question nor how to answer it, and stack overflow typically has more complicated questions that contain information that doesn't actually help me.
 ```
 
+```
+### July 13 — Assembling and more code practice
+
+**Goal today:** Assembling the masses and foam paddles as well as practicing cleaning my data myself
+
+**What worked:** I had no issues with making the foam paddles. I also was able to clean my data quite quickly, with the biggest struggle being trying to drop the lines containing missing data. I also modified the relative paths of my code to account for the fact the files are in a folder. Thankfully VScode makes finding the relative paths easier
+
+**What failed / surprised me:** There were a few issues with assembling the masses, so I couldn't make those yet. Also the spring seems to be too small, as pulling it down would require it to go upwards too far, meaning tension is lost. I noticed in my coding that stack overflow was much more helpful today, and I think I overall got better at using google to research what I need to do. I struggled removing the lines with missing data not because I didn't know the command, but rather simply because I didn't know I needed to assign that data to a variable. I eventually figured it out, though.
+
+**Data / files I created:** tracker_first_run_cleaning.py and My_Tracker_First_Run_Data_Cleaned.csv, which were both put in a new folder containing all the first run information: Tracker First Run
+```

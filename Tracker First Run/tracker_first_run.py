@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-csv_file = pd.read_csv('Tracker_First_Run_Data_clean.csv') # uses relative path
+csv_file = pd.read_csv('Tracker First Run/Tracker_First_Run_Data_clean.csv') # uses relative path
 print(csv_file)
 
 max_height = csv_file['y'].max()
