@@ -182,3 +182,16 @@ Format
 
 **Data / files I created:** tracker_first_run_cleaning.py and My_Tracker_First_Run_Data_Cleaned.csv, which were both put in a new folder containing all the first run information: Tracker First Run
 ```
+
+```
+### July 14 — Practicing merging data and reading it
+
+**Goal today:** Merging sample data with my tracker data and plotting it
+
+**What worked:** I quite quickly managed to combine all the data into 1 column and turned it into a csv file. I had no issues renaming columns or locating columns as I was able to figure it out quite quickly with google.
+
+**Observations:** I noticed that the line that has more damping has the larger paddles. This makes sense as those paddles are catching air and likely causing drag forces, which supports my earlier predictions. The damping seems to make a huge difference early on as the mass with the small paddles oscilates much more, yet still on the same period. Eventually, the bounces of both die down though.
+
+**Data / files I created:** merging_sample_data_and_comparing.py and sample_data_merged_with_my_data.csv
+```
+
