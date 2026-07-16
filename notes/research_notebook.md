@@ -195,3 +195,13 @@ Format
 **Data / files I created:** merging_sample_data_and_comparing.py and sample_data_merged_with_my_data.csv
 ```
 
+```
+### July 15 — Codecademy review
+
+**Goal today:** Review a lot of what I learned with Codecademy
+
+**What worked:** I was able to work with most of the functions. Today took me longer than most days with Codecademy relative to their estimated time (though it still went at roughly the estimated pace). This is probably because the code is less fresh in my head and took more effort to get working. I noticed loops took me the longest to grasp, probably because theres just so many ways to do loops (especially considering for loops, while loops, and if statements),
+
+**Data / files I created:** code_challenges.py in the Learning Coding and Practice folder
+```
+
