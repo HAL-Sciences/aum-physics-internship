@@ -1,0 +1,11 @@
+# Video files are binary. Never rewrite line endings inside them (that corrupts
+# the file), and don't try to show a text diff for them.
+*.mp4  -text -diff
+*.mov  -text -diff
+*.MOV  -text -diff
+*.m4v  -text -diff
+*.avi  -text -diff
+
+# Tracker project archives are zip files -- same rule.
+*.trz  -text -diff
+*.trk  -text -diff
