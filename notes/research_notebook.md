@@ -214,3 +214,10 @@ Format
 I imported matplotlib.pyplot at the start of the second part as it was not needed earlier. The first line following that command just took the data from the new file. The 2 following lines found the specific data I was searching for, the data with large and small paddles. I specifically chose large and small paddles because that allowed me to locate using the same column for both datasets. If I chose none, I would also end up locating my tracker data, so I would need to use a different column or perhaps multiple pieces of information in order to get it work. I had print commands to ensure I actually got the correct datasets. The first 2 lines after that tell matplotlib what I wanted to plot (both the data sets and the actual columns to pay attention to). The next 3 lines labeled the graph, and the line after that created a grid. The .legend function tells matplotlib to label the first line 'small paddles' and the second line 'large paddles'. The last line of code is what actually shows the graph of the data.
 ```
 
+```
+### July 20 — experiment setup
+
+**Goal today:** Build and test the masses
+
+**What failed / surprised me:** The eye bolt was way more heavy than expected, so I had to modify the numbers in order for the experiment to actually work. The masses were a little inconsistent, but I managed to find working numbers. My dad and I modified a few things to accomidate for the materials we had.
+```
