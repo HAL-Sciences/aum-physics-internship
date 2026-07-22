@@ -221,3 +221,21 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 
 **What failed / surprised me:** The eye bolt was way more heavy than expected, so I had to modify the numbers in order for the experiment to actually work. The masses were a little inconsistent, but I managed to find working numbers. My dad and I modified a few things to accomidate for the materials we had.
 ```
+
+```
+### July 21 — Doing the runs
+
+**Goal today:** Recording all the runs.
+
+**What worked:** My set up allowed me to record the videos well.
+
+**What failed / surprised me:** I couldn't actually get through all the runs, especially because they took much longer than expected (4 minutes for a lot of the runs, rather than the expected, 10 seconds to a minute). I had to end the videos early to ensure that the files could even be moved, and most of them are too large to be pushed to github. In fact, the motion could've probably continued for 10+ minutes with a lot of the runs, especially based on the data from the tracker run. I also had to end that early, as it was taking really long and there may need to be some changes to the set up for it to be viable to do 15 runs. This wen't unnoticed in the test run because I used the 6 inch paddle as I wanted to ensure that the spring could withstand the weight.
+
+**What I changed:** Since I am using a yardstick, My data will be collected in inches. There is a direct conversion from inches to meters, which I can use if necessary.
+
+**Data / files I created:** run1_M1_P0.mov, run2_M1_P2.mov, run3_M1_P4.mov, run4_M1_P6.mov, run5_M1_P0.mov, run1_M1_P0.csv, run1_M1_P0pdf.pdf. Most are not accessible due to being too large.
+
+**Questions for Gaurav:**
+
+**Next step:**
+```
