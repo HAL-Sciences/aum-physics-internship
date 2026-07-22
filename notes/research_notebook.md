@@ -234,8 +234,5 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 **What I changed:** Since I am using a yardstick, My data will be collected in inches. There is a direct conversion from inches to meters, which I can use if necessary.
 
 **Data / files I created:** run1_M1_P0.mov, run2_M1_P2.mov, run3_M1_P4.mov, run4_M1_P6.mov, run5_M1_P0.mov, run1_M1_P0.csv, run1_M1_P0pdf.pdf. Most are not accessible due to being too large.
-
-**Questions for Gaurav:**
-
-**Next step:**
 ```
+
