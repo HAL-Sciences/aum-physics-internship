@@ -236,3 +236,14 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 **Data / files I created:** run1_M1_P0.mov, run2_M1_P2.mov, run3_M1_P4.mov, run4_M1_P6.mov, run5_M1_P0.mov, run1_M1_P0.csv, run1_M1_P0pdf.pdf. Most are not accessible due to being too large.
 ```
 
+```
+### July 22 — Finding the period with actual data
+
+**Goal today:** Using the actual data to find and check the period.
+
+**What worked:** I had no issues cleaning the file or plotting it, which makes sense considering that I have already done that. I copied the code over and changed the information in them to match the new information, but I would not have any issues manually writing something like usecols=range(3), and I frequently used the pd.read_csv function anyways. I wrote the model function and numpy worked fine. I successfully guessed that np.pi would give the value of pi, so writing the code to find omega was no problem. I decided to use code to find the first peak in my data, and after some lines, I managed to plot 10 seconds and count the number of peaks from the first to 10 seconds later. I used this period along with a for loop to create grid lines at exactly where each future peak should be in a plt plot. The peaks almost perfectly lined up with the grid lines, suggesting that period indeed is constant.
+
+**What I changed:** I decided to turn the plotting and cleaning into functions, so that in the future I can run my already written functions to complete the necessary tasks. It took me a bit of research and thought, but I managed to even automatically change the name of the files so that I could create a new clean one.
+
+**Data / files I created:** run1_M1_P0_clean.csv, under the data folder in experiment, and fitting_data.py in the experiment folder.
+```
