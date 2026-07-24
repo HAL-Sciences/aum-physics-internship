@@ -247,3 +247,16 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 
 **Data / files I created:** run1_M1_P0_clean.csv, under the data folder in experiment, and fitting_data.py in the experiment folder.
 ```
+
+```
+### July 23 — All 15 runs
+
+**Goal today:** Record the 15 runs
+
+**What I tried:** I recorded them the same way as last time, but with 90 second recordings. I had to change this, however. I had no issues pulling the masses down 4 inches (using inches instead of centimeters due to it being a yard stick), though the bounces weren't perfectly straight. The paddles didn't seem to have any effect on how straight up and down the bounces were, though, so it seemed to be based on my release angle and how precisely I hooked the eyebolt to the spring. If any run veered off too much, I decided to just restart them, so all the swinging is small or not even noticeable. Recording took about an hour, and I was able to multitask. (I renamed and pushed files from each batch while recording the next).
+
+**What failed / surprised me and what I changed:** The first few runs all ended up being close to 100 mb, one of which went over. We decided it would be best to decrease the recording time as I was already recording 30 fps HD. Some of the files for the last few runs were 40 mb larger than the others, so I decided, so I decided to put them into a google drive as even with my dad's help, we couldn't easily compress them.
+
+**Data / files I created:** 15 files for the videos, and runs.csv, all in the data folder. experiment/data/videos/run01_M1_P0.mov, experiment/data/videos/run02_M1_P2.mov, experiment/data/videos/run03_M1_P4.mov, experiment/data/videos/run04_M1_P6.mov, experiment/data/videos/run05_M1_P0.mov, experiment/data/videos/run06_M2_P0.mov, experiment/data/videos/run07_M2_P2.mov, experiment/data/videos/run08_M2_P4.mov, experiment/data/videos/run09_M2_P6.mov, experiment/data/videos/run10_M2_P2.mov, experiment/data/videos/run11_M3_P0.mov, experiment/data/videos/run12_M3_P2.mov, experiment/data/videos/run13_M3_P4.mov, experiment/data/videos/run14_M3_P6.mov, experiment/data/videos/run15_M3_P6.mov runs 11-15 are also in a google drive.
+```
+
