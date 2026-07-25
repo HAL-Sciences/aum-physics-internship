@@ -260,3 +260,11 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 **Data / files I created:** 15 files for the videos, and runs.csv, all in the data folder. experiment/data/videos/run01_M1_P0.mov, experiment/data/videos/run02_M1_P2.mov, experiment/data/videos/run03_M1_P4.mov, experiment/data/videos/run04_M1_P6.mov, experiment/data/videos/run05_M1_P0.mov, experiment/data/videos/run06_M2_P0.mov, experiment/data/videos/run07_M2_P2.mov, experiment/data/videos/run08_M2_P4.mov, experiment/data/videos/run09_M2_P6.mov, experiment/data/videos/run10_M2_P2.mov, experiment/data/videos/run11_M3_P0.mov, experiment/data/videos/run12_M3_P2.mov, experiment/data/videos/run13_M3_P4.mov, experiment/data/videos/run14_M3_P6.mov, experiment/data/videos/run15_M3_P6.mov runs 11-15 are also in a google drive.
 ```
 
+```
+### July 24 — Basics with strings
+
+**Goal today:** Start the Codecadamey lesson strings.
+
+**What worked:** I completed the lessons in strings with no problems. It was very useful to learn that strings are basically lists of characters, which made it much more intuitive how things like indexes work with them. The course asked me to use a few for loops and functions, which I had no issues doing as I have gotten quite familiar with them.
+```
+
