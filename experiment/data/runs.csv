@@ -1,16 +1,16 @@
-run,mass_key,paddle_key,total_weight_g,video_file,swing,notes
-01, M1, P0, 178, experiment/data/videos/run01_M1_P0.mov, small,
-02, M1, P2, 179, experiment/data/videos/run02_M1_P2.mov, small,
-03, M1, P4, 185, experiment/data/videos/run03_M1_P4.mov, small,
-04, M1, P6, 193, experiment/data/videos/run04_M1_P6.mov, small, the paddle hit the ruler a little bit
-05, M1, P0, 178, experiment/data/videos/run05_M1_P0.mov, small, repeat of run 01
-06, M2, P0, 230, experiment/data/videos/run06_M2_P0.mov, none,
-07, M2, P2, 231, experiment/data/videos/run07_M2_P2.mov, none,
-08, M2, P4, 237, experiment/data/videos/run08_M2_P4.mov, small,
-09, M2, P6, 245, experiment/data/videos/run09_M2_P6.mov, none,
-10, M2, P2, 231, experiment/data/videos/run10_M2_P2.mov, small, repeat of run 07
-11, M3, P0, 272, experiment/data/videos/run11_M3_P0.mov, small,
-12, M3, P2, 273, experiment/data/videos/run12_M3_P2.mov, none,
-13, M3, P4, 279, experiment/data/videos/run13_M3_P4.mov, small,
-14, M3, P6, 287, experiment/data/videos/run14_M3_P6.mov, none, the paddle hit the ruler a little bit
-15, M3, P6, 287, experiment/data/videos/run15_M3_P6.mov, small, repeat of run 14
+run,mass_key,paddle_key,total_weight_g,video_file,tracked,swing,notes
+01, M1, P0, 178, experiment/data/videos/run01_M1_P0.mov, ,small,
+02, M1, P2, 179, experiment/data/videos/run02_M1_P2.mov, ,small,
+03, M1, P4, 185, experiment/data/videos/run03_M1_P4.mov, ,small,
+04, M1, P6, 193, experiment/data/videos/run04_M1_P6.mov, ,small, the paddle hit the ruler a little bit
+05, M1, P0, 178, experiment/data/videos/run05_M1_P0.mov, ,small, repeat of run 01
+06, M2, P0, 230, experiment/data/videos/run06_M2_P0.mov, ,none,
+07, M2, P2, 231, experiment/data/videos/run07_M2_P2.mov, ,none,
+08, M2, P4, 237, experiment/data/videos/run08_M2_P4.mov, ,small,
+09, M2, P6, 245, experiment/data/videos/run09_M2_P6.mov, ,none,
+10, M2, P2, 231, experiment/data/videos/run10_M2_P2.mov, ,small, repeat of run 07
+11, M3, P0, 272, experiment/data/videos/run11_M3_P0.mov, ,small,
+12, M3, P2, 273, experiment/data/videos/run12_M3_P2.mov, ,none,
+13, M3, P4, 279, experiment/data/videos/run13_M3_P4.mov, ,small,
+14, M3, P6, 287, experiment/data/videos/run14_M3_P6.mov, ,none, the paddle hit the ruler a little bit
+15, M3, P6, 287, experiment/data/videos/run15_M3_P6.mov, ,small, repeat of run 14
