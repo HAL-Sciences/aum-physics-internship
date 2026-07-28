@@ -5,3 +5,8 @@ Thumbs.db
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+experiment/data/videos/TESTrun1_M1_P0.mov
+experiment/data/videos/TESTrun2_M1_P2.mov
+experiment/data/videos/TESTrun3_M1_P4.mov
+experiment/data/videos/TESTrun4_M1_P6.mov
+experiment/data/videos/TESTrun5_M1_P0.mov

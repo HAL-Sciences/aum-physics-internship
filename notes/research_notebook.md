@@ -268,3 +268,14 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 **What worked:** I completed the lessons in strings with no problems. It was very useful to learn that strings are basically lists of characters, which made it much more intuitive how things like indexes work with them. The course asked me to use a few for loops and functions, which I had no issues doing as I have gotten quite familiar with them.
 ```
 
+```
+### July 27 — Beginning tracking
+
+**Goal today:** Begin tracking the videos
+
+**What worked:** I tracked runs 11, 15, and 08 successfully and made their corresponding .csv files. It took about an hour to do, some of which was just spent familiarizing myself with the tracking process. The sideways swings made it slightly harder to track them, but it overall went well.
+
+**What I changed:** I decided to go by every 3 frames rather than every 5 to make the data less random and to increase the number of clear peaks. Based on how few points are between each peak and trough, I think this was the right decision.
+
+**Data / files I created:** experiment/data/run08_M2_P4.csv, experiment/data/run11_M3_P0.csv, experiment/data/run15_M3_P6.csv
+```
