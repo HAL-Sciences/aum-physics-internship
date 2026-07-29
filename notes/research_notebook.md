@@ -279,3 +279,14 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 
 **Data / files I created:** experiment/data/run08_M2_P4.csv, experiment/data/run11_M3_P0.csv, experiment/data/run15_M3_P6.csv
 ```
+
+```
+### July 28 — Tracking the first 6 runs
+
+**Goal today:** Track runs 1-6.
+
+**What worked:** I had no issues tracking runs 1-6 and plotting the data of runs 11 vs 15. It seems run 15 died down quicker according to the graph, matching with the theory that paddles increase drag and therefore increase damping. I continued tracking these runs going 3 frames at a time and it took about an hour to complete. I used working_with_data.py to do the plotting, and I used the code I had used when working with sample data, though slightly modified since the data was not combined.
+
+**Data / files I created:** experiment/data/run01_M1_P0.csv experiment/data/run02_M1_P2.csv experiment/data/run03_M1_P4.csv experiment/data/run04_M1_P6.csv experiment/data/run05_M1_P0.csv experiment/data/run06_M2_P0.csv experiment/working_with_data.py
+```
+
