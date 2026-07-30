@@ -290,3 +290,12 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 **Data / files I created:** experiment/data/run01_M1_P0.csv experiment/data/run02_M1_P2.csv experiment/data/run03_M1_P4.csv experiment/data/run04_M1_P6.csv experiment/data/run05_M1_P0.csv experiment/data/run06_M2_P0.csv experiment/working_with_data.py
 ```
 
+```
+### July 29 — Finishing tracking
+
+**Goal today:** Track the remaining runs (7, 9, 10, 12-14)
+
+**What worked:** I had no issues tracking the remaining runs. I plotted the data of runs 1-4 in working_with_data.py. I used a for loop this time since there were 4 dataframes rather than 2, which made the code much more condensed and scalable. It also matched the theory that paddles increase drag and therfore damp the motion. Run 2, despite having a paddle, didn't seem to damp that much, though I think it is because the paddle was small. Run 3, with a 4x4 paddle, had a significantly more visible damping, and run 4 was even more damped. 
+
+**Data / files I created:** experiment/data/run07_M2_P2.csv, experiment/data/run09_M2_P6.csv, experiment/data/run10_M2_P2.csv, experiment/data/run12_M3_P2.csv, experiment/data/run13_M3_P4.csv, experiment/data/run14_M3_P6.csv
+```
