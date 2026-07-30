@@ -299,3 +299,14 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 
 **Data / files I created:** experiment/data/run07_M2_P2.csv, experiment/data/run09_M2_P6.csv, experiment/data/run10_M2_P2.csv, experiment/data/run12_M3_P2.csv, experiment/data/run13_M3_P4.csv, experiment/data/run14_M3_P6.csv
 ```
+
+```
+### July 30 — Combining Runs
+
+**Goal today:** Combine all the runs
+
+**What worked:** I successfully used a list of all the files along with a for loop to create pandas dataframes, extract the run#, paddle key, and mass key, of all the runs. The only thing that took me a second was figuring out how to get all the dataframes into a list, but I realized I had just used the wrong bracket and I quickly fixed the code. I noticed that the pd.concat code uses a list, hence why I used a list to combine all the files in this case. It took me about 10 minutes total, and I worked in working_with_data.py
+
+**Data / files I created:** all_runs.csv
+```
+
