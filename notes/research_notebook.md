@@ -310,3 +310,15 @@ I imported matplotlib.pyplot at the start of the second part as it was not neede
 **Data / files I created:** all_runs.csv
 ```
 
+```
+### July 31 — Fitting my own Data
+
+**Goal today:** Fit my own data for run 4
+
+**What worked:** I had no problem using my older code but slightly updated to makes guesses for my period, plotting, and creating functions. The only issue I had was an indexing error because pulling run04 kept the entire indeces, but using the head command didn't but I realized that entire step was uneccessary quite quickly and realized I could just use the dataframe for all the data instead anyways. I got a pretty good prediction for omega, so I ran that and the fit had no issues getting the period perfect. Here are the numbers it got [1.37350787e+00  8.52685833e+00 -8.08605110e-03 -3.36909913e+00]. The graph of the residual appeared to follow asymptotes similar to hyperbolas, slightly rotated. There is a moment in the middle where the swap between the predictions having a magnitude too low and too high is visible. 
+
+**What failed / surprised me:** The function does not have a damping factor, so the graph was completely unable to damp. I didn't have any ways to change this without completely rewriting the function, so I compared what I could: the location of the peaks, which matched up.
+
+**Data / files I created:** experiment/fitting_my_own_data.py
+```
+
