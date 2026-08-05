@@ -1,0 +1,4 @@
+# Needed for experiment/verify_api_keys.py and Week 6's LLM evaluation.
+anthropic
+openai
+python-dotenv
