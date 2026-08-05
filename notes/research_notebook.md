@@ -337,3 +337,17 @@ For my predictions, I imagine gamma will be much higher with larger paddles and 
 **Data / files I created:** experiment/fitting_the_damped_model.py
 ```
 
+```
+### August 4 — Fitting all Runs
+
+**Goal today:** Fit all 15 runs and create a file with the numbers needed for the fitted curve
+
+**What worked:** I had no issues using a for loop to get all the information necessary to get the fitted numbers, nor make the lists. I completed most things quickly with minimal issues. Most of the graphs looked right, but there were some odd things I noticed. I compared the values I got this time around to last time for run04, and they were almost identical, suggesting it went well. I wasn't entirely sure if I should've separated each value before converting the dataframe into a csv file or just kept them together, but I decided to keep all the values together as it would be easier to plug into a function and also quite easy to separate.
+
+**What failed / surprised me:** It took me a bit to understand certain errors, like why I had issues filtering by mass keys, but then I understood I needed to use .all in some way, did some research along with error checking, and managed to figure out how to get it to actually filter. I did notice I could've also just filtered by the run number, knowing the mass keys of each run, but decided it would be better to actually learn how to filter the way I did
+
+**Observations:** I noticed when doing the plots that almost all the plots looked extremely good, except run 15 which looked incredibly wacky. I don't know for sure why specifically run 15 had this happen, but I noticed that sometimes its peaks would be significantly higher or lower than the previous ones, so the fit line looked much more random. Other than that, though, the fit lines were really good. I checked the gamma values, and in each mass group, a larger paddle meant a higher gamma value, supporting my prediction. Additionally, I noticed that the larger masses experienced slightly less damping than their lower mass counterparts, supporting one of my earlier theories that the larger masses should dampen, which I predicted would be due to them going through the air slower (because of the period equation), hence reducing drag. Interestingly, their omega values were also lower, suggesting that the period is indeed lower (matching the period equation). This explains why run 4 damped the most, as it was the lowest mass and highest paddle, whereas run 11 damped the least as it was the opposite.
+
+**Data / files I created:** experiment/fitting_all_runs.py, and experiment/data/fitted_params.csv
+```
+
