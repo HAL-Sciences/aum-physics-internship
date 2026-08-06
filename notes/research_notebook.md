@@ -351,3 +351,15 @@ For my predictions, I imagine gamma will be much higher with larger paddles and 
 **Data / files I created:** experiment/fitting_all_runs.py, and experiment/data/fitted_params.csv
 ```
 
+```
+### August 5 — Using scatterplots
+
+**Goal today:** using scatterplots to compare mass and omega, as well as paddle size and gamma.
+
+**What worked:** I first fixed the table from yesterday, with the hardest part being getting the paddle sizes, as it took a few attempts to actually get the keys. I made the new lists and updated fitted_params.csv. I used this file when making my scatter plots, and had no issues doing so.
+
+**Observations:** Omega decreased as masses increased, matching my earlier predictions. Omega decreasing, means a longer period (I misstyped this yesterday). This follows the period equation (which predicts that mass increases period). The omega values valued a decent bit in each mass group, but there is still a very clear trend line showing omega decreasing with mass. In the gamma verse paddle_size plot, it appears gamma increases with paddle sizes. It too varies a lot in each paddle group, with the sort of following a power curve, but it is unclear due to the fact there are only 4 sizes. Sizes 0 and 2 are pretty similar to each other, but by paddle size of 6, it becomes significantly clearer that paddles have a huge impact on gamma, meaning they increase decay rate as predicted.
+The twin runs have similar numbers in some aspects, and very different numbers in others. Both pairs have A values that are opposites, but that makes sense because the amplitude hasn't changed, only the sign. They have differing phi values, which just means the phase is different (which basically means they don't start at exactly the same times). The C values are surprisingly similar, but similar to phase shifts, they can easily change with the smallest of differences in conditions. The gamma and omega values should be similar, and they indeed are quite close. They aren't perfect, however, as the gamma values in run 1 vs run 5 are 0.0014 away, and omega values are 0.06 away. These aren't the largest differences, but they are relatively big still. Run 7 and 10 have closer gamma and omega values, though.
+
+**Data / files I created:** experiment/scatter_plots.py
+```

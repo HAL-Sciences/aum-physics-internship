@@ -23,7 +23,8 @@ phi0 = 0
 gamma0 = 0.01
 
 run_numbers = []
-fitted_values = []
+A = []; gamma = []; omega = []; phi = []; C = []
+masses = []; paddles = []
 run_frames = []
 for run_number in range (1,16):
     # turns run number into the appropriate string
@@ -44,27 +45,37 @@ for run_number in range (1,16):
     # figures out which omega to use
     if (run['mass_key'] == 'M1').all() == True:
         omega0 = omega0M1
+        mass = 178
     elif (run['mass_key'] == 'M2').all() == True:
         omega0 = omega0M2
+        mass = 230
     elif (run['mass_key'] == 'M3').all() == True:
         omega0 = omega0M3
+        mass = 272
     else: print('Error on run', run_number); omega0 = -999
+    paddle = int(run.head(1)['paddle_key'].to_string()[-1]) # takes first line paddle key, makes it a string, takes the number, and makes it an integer
+    # print(paddle)
     # sets up popt and the data frames
     popt,_ = curve_fit(x, run['t'], run['y'], p0 = [A0, gamma0, omega0, phi0, C0])
-    fitted_values.append(popt)
+    A.append(popt[0])
+    gamma.append(popt[1])
+    omega.append(popt[2])
+    phi.append(popt[3])
+    C.append(popt[4])
+    masses.append(mass)
+    paddles.append(paddle)
     run_numbers.append('run'+run_number)
     run_frames.append(run)
-# print(fitted_values, run_numbers)
-all_fits = pd.DataFrame({'guessed_values' : fitted_values})
-all_fits['run'] = run_numbers
+all_fits = pd.DataFrame({'run':run_numbers, 'A':A, 'gamma':gamma, 'omega':omega,'phi':phi ,'C':C, 'mass_grams':masses, 'paddle_inches':paddles})
+# print(all_fits)
 # all_fits.to_csv('experiment/data/fitted_params.csv', index = False)
 
-# print(fitted_values[3]) # should print roughly [ 2.97221638  0.05275184  8.52389841  0.02432687 -3.36850759]
-##                               actually prints [ 2.9722164   0.05275185  8.52389835  0.02432772 -3.36850759]
+# print(all_fits.head(4)) # should print run 4 as roughly [ 2.97221638  0.05275184  8.52389841  0.02432687 -3.36850759]
+##                                        actually prints [ 2.972216    0.052752    8.523898    0.024328   -3.368508]
 
 # plotting everything
 for index in range(0,15):
-    fit = x(run_frames[index]['t'], *fitted_values[index])
+    fit = x(run_frames[index]['t'], A[index], gamma[index], omega[index], phi[index], C[index])
     fit_frame = pd.DataFrame({'y' : fit})
     fit_frame['t'] = run_frames[index]['t']
     plot_list([run_frames[index], fit_frame])
