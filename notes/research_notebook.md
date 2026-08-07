@@ -363,3 +363,28 @@ The twin runs have similar numbers in some aspects, and very different numbers i
 
 **Data / files I created:** experiment/scatter_plots.py
 ```
+
+```
+### August 6 — Writing the prompts
+
+**Goal today:** Write the prompts for the AIs.
+
+**Prompts:** 
+I did an experiment where I pulled down and released a mass hanging from a spring with a paddle adding air resistance. The first column is time in seconds, and the second is vertical displacement. What equation describes this motion and what does each part of it mean?
+
+I did an experiment, and here is the data that came from it. The first column is time in seconds, and the second is a measurement. What processes could produce this data and what equations would fit it?
+
+I have this data with 2 columns, column 1 and column 2. Find some equation that can relate the data in these columns and explain how you got to it.
+
+I did an experiment, and here is the data that came from it. The first column is time in seconds, and the second is a measurement. What processes could produce this data and what equations would fit it? How confident are you in your answer and what in the data supports it?
+
+
+**What worked:** I had no issues with the code portion for today, and I spent some time on writing the prompts.
+
+**Predictions:** The models should have no issues with the first rung. I think they will struggle on the second rung, and can probably figure out that its oscillations, but maybe not where the oscillations came from. I think they will be able to figure out time on the third rung, but not the fact that its oscillations nor what the equation is. I think on the fourth rung, they will not be able to come up with the equation nor that its oscillations specifically, but they should be able to figure out that its an oscillation-like motion.
+
+**Other notes:** Some other interesting ways to challenge the AIs I thought of are to move around the columns so that time isn't always increasing linearly, and perhaps even organize it by height. That could force them to think about how to look at the data differently. Another interesting trick would be to do some transformation to the data, such as give it in seconds squared, so that the AIs would have to figure out the equation using data like a human would, without knowing what the final units would be. This approach would be similar to something like measuring gravity, which is in meters/second squared, but realistically you would be recording that in meters vs seconds (so reasoning would be needed.)
+
+**Data / files I created:** experiment/separating_runs.py
+```
+
