@@ -16,9 +16,9 @@ run11 = all_runs.loc[all_runs['run'] == 'run11']
 run11 = run11[['t', 'y']]
 
 run04_messy = run04.round({'y':0})
-print(run04)
-print("------------------------------")
-print(run04_messy)
+# print(run04)
+# print("------------------------------")
+# print(run04_messy)
 run11_messy = run11.round({'y':0})
 
 # run04.to_csv('experiment/data/run04_clean.csv', index=False, header=False)
