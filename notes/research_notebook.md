@@ -392,10 +392,20 @@ To answer the question from last check in, I assume damping grows faster than pa
 ```
 ### August 7 — Strings
 
-**Goal today:** Finish the Codecadamey strings module.
+**Goal today:** Finish the Codecademy strings module.
 
 **What worked:** I completed the rest of the strings module with no issues. I did both projects, and was able to get them to work successfully. I already had experience working with both ciphers used in the project, so they were familiar in that aspect.
 
 **Predictions:** I do not think AIs will describe run04 and run11 differently. From my experiencing with them, they typically do not point out differences unless prompted and instead focus on patterns. For example, I have join ChatGPT an answer key with errors before, and told it was from an answer key. It immediately assumed that everything was correct, until I pointed out the errors, after which it agreed that there were 3 errors in the problem on the key. I imagine a similar case would happen the second it sees oscillations, not commenting on the damping but rather the equation. The only possible difference I imagine is that they might default to using the simple equation for run11 and the damped equation for run04 just because run11 may be closer to the simple patterns. 
+```
+
+```
+### August 10 — Modules in Codecademy
+
+**Goal today:** Complete the lesson and video for pythonn modules in Codecademy
+
+**What worked:** I completed the lesson quickly with no issues. I am already quite familiar with modules as I have been using them frequently throughout the internship. The lesson mainly focused on the datetime and random modules, which I had no issues using.
+
+**For tomorrow:** It will be important to pay attention to the wording of how AIs talk about things. Using different equations for differnt runs, or using different adjectives, is a sign that the AIs view the runs differently.
 ```
 
