@@ -396,7 +396,7 @@ To answer the question from last check in, I assume damping grows faster than pa
 
 **What worked:** I completed the rest of the strings module with no issues. I did both projects, and was able to get them to work successfully. I already had experience working with both ciphers used in the project, so they were familiar in that aspect.
 
-**Predictions:** I do not think AIs will describe run04 and run11 differently. From my experiencing with them, they typically do not point out differences unless prompted and instead focus on patterns. For example, I have join ChatGPT an answer key with errors before, and told it was from an answer key. It immediately assumed that everything was correct, until I pointed out the errors, after which it agreed that there were 3 errors in the problem on the key. I imagine a similar case would happen the second it sees oscillations, not commenting on the damping but rather the equation. The only possible difference I imagine is that they might default to using the simple equation for run11 and the damped equation for run04 just because run11 may be closer to the simple patterns. 
+**Predictions:** I do not think AIs will describe run04 and run11 differently. From my experiencing with them, they typically do not point out differences unless prompted and instead focus on patterns. For example, I have given ChatGPT an answer key with errors before, and told it was from an answer key. It immediately assumed that everything was correct, until I pointed out the errors, after which it agreed that there were 3 errors in the problem on the key. I imagine a similar case would happen the second it sees oscillations, not commenting on the damping but rather the equation. The only possible difference I imagine is that they might default to using the simple equation for run11 and the damped equation for run04 just because run11 may be closer to the simple patterns. 
 ```
 
 ```
@@ -409,3 +409,36 @@ To answer the question from last check in, I assume damping grows faster than pa
 **For tomorrow:** It will be important to pay attention to the wording of how AIs talk about things. Using different equations for differnt runs, or using different adjectives, is a sign that the AIs view the runs differently.
 ```
 
+```
+### August 11 — Prompting GPT
+
+**Goal today:** Prompt ChatGPT and read analyze its answers
+
+**What worked:** I quite quickly grasped the code and filled in what I needed to run it.
+
+**What I changed:** I know that AIs like ChatGPT use markdown and LaTeX. The answers were hard to read, so I put them into a .md file and modified them slightly so that I could see what they said in the VScode view mode. 
+
+**Answer observations:**
+
+Rung 1, Run04: The AI was able to correctly get to the equation for damped harmonic oscillators, and did work off the actual data. It correctly explains each portion of the equation.
+
+Rung 2, Run04: The AI once again got the correct equation and thought it was a damped harmonic oscillator, but showed signs of less confidence. It also lists physical processes that could've been responsible, but doesn't know which it was. It gave a second equation with a sine function as well, suggesting there is another process that might be confusing it. It also considers the possibility the oscillation does not fully decay. It created an equation using the actual data.
+
+Rung 3, Run04: The AI got a slightly different equation this time, guessing that a portion of the amplitude does not dampen. It still guessed that it was a decaying oscillation, but didn't know what the measurements were so used x instead of t. It created an equation using the actual data.
+
+Rung 4, Run04: The AI got the corect general equation, and made a rough equation for the data it was fed, even using a round function to account for the added messiness in the data. It again listed a few things that could cause this data, but wasn't sure on which. It claimed high confidence of the data being oscillations, but more moderate confidence in its numbers and low confidence in the physical mechanism, which makes sense based off the data.
+
+Rung 1, Run11: It correctly guessed the governing equation, though used beta instead of gamma. It commented on how there was "weak decay", showing a difference to run04. It also comments on how it "only slowly los[es] amplitude."
+
+Rung 2, Run11: It got the general equation, but used a noise factor of epsilon of time. The big important thing is that it did NOT have a decay factor at all this time, and had a first guess of simple harmonic motion. The equations contain numbers guessed from the data as well, like in all other runs. There were a lot of interesting equations that the AI came up with, but it even says the data does "not show a decaying envelope" and says that if there is damping, the system is likely "being driven or is in a steady-state oscillation."
+
+Rung 3, Run11: Once again, it got the general equation but did not put in a damping factor. Again, it uses x instead of t, and even uses an x_0 for a shift instead of phi. It says the difference between the data and the guessed equation probably comes from noise, rounding, and slight irregularities. The AI does not guess what process caused this.
+
+Rung 4, Run11: Once again, the equation contains no damping. It says that the equation was nearly sinusoidal and comments on how the data is periodic and rounded. It comments on no obvious growth, decay, or drift, unless gamma is very small, but it did at least adress the damped harmonic motion equation. It says that possible processes could've been simple harmonic motion as well as other things, though doesn't seem to ever apply it could've been from a spring moving up and down. The AI said it was very confident (in fact it appears to be near certain) that the data is from a periodic oscillatory process that has some noise, but is significantly less confident on the exact process.
+
+**Other notes:** I haven't tested the guessed equation, so I don't know if they are actually good guesses or completely stray away from the actual data the AI was fed. I was right about the AI starting to struggle at rung 2 onwards, though am somewhat surprised it mostly still got that the equations were from harmonic motion. There were some differences between the guesses the AI had in run04 verse run11, and I was right that the biggest difference came from the potential to use the simple equation rather than the damped one, which seems to have happened for most rungs. I am surprised it specifically mentioned the weak decay in rung 1, though.
+
+**Data / files I created:** experiment/all_answers_readable.md, experiment/read_answer.py
+
+**AI help today:** No AI help, just prompting.
+```
