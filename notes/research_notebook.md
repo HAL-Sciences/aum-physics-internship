@@ -442,3 +442,63 @@ Rung 4, Run11: Once again, the equation contains no damping. It says that the eq
 
 **AI help today:** No AI help, just prompting.
 ```
+
+```
+### August 12 — Prompting Claude
+
+**Goal today:** Prompt claude and compares its answers to GPT.
+
+**What worked:** I had no issue getting the code to prompt claude working nor any issues with printing it. Thankfully this time I didn't have to do many adjustments and the raw answers are almost all readable in a markdown file.
+
+**Answer observations:**
+
+Rung 1, Run04: Claude was able to get the correct equation, though used a fractional form rather than gamma * t. It also gave an equation using my numbers, and worked off of them. It thoroughly even used the numbers to claim that the data shows light damping.
+
+Rung 2, Run04: Claude came to a nearly identical equation as last time, this time immediately giving fitted numbers rather than the general equation. It very confidently calls it a lighty damped "high-Q resonator". I don't know what those are, so can't easily comment on accuracy. It does later mention that a mass-spring-damer is such an example, and claude doesn't claim to know the exact process.
+
+Rung 3, Run04: This itme claude used the standard gamma * t style equation, and again decided to immediately skip to actual numbers instead of giving a general equation. The equation comes from actually analyizing and pattern matching as Claude says that if you look at the shape, you can see the swing size getting smaller, which is typically that general equation.
+
+Rung 4, Run04: "NO TEXT RETURNED (stop_reason: max_tokens)"
+
+Rung 1, Run11: Claude gave the correct general equation, including damping, then fits it to the numbers, assuming the units are centimeters. It assumes that the center being below 0 is because of gravity, not because of the way the tracking works. Claude specifically calls out how the damping is very tiny and almost so small that the noise over powers it.
+
+Rung 2, Run11: Claude gave an equation that fits to the numbers with no damping included. It correctly states taht a process that could produce the equation is an undamped or lightly damped oscillator, and specifically calls out how the damping factor might've just been too small in my data. Claude seems to be also saying that if you look at the residuals after doing more math, you could get more precision on the processes involved.
+
+Rung 3, Run11: Again, Claude gave an equation that fits the numbers with no damping included. It again suggests looking at the shape to see the 'pure periodic signal'. It seems to miss the chance of a very light decay entirely.
+
+Rung 4, Run11: Claude first explained prtions of the data before giving the equation that fits. It calls out how the noise in the data is coming from integer rounding, and says there is no evidence of measurement noise. iT does at least consider the possibility of a damped oscillator, but thinks it is unlikely. It is very confident the only noise is integer rounding and is not confident on what the process is, matching up with its guesses (as mass-spring was one of its last guesses).
+
+| rung | run | gpt | claude |
+|---|---|---|---|
+| rung1 | run04 | recognized | recognized |
+| rung2 | run04 | recognized | recognized |
+| rung3 | run04 | reasoned | reasoned |
+| rung4 | run04 | recognized | N/A |
+| rung1 | run11 | recognized | recognized |
+| rung2 | run11 | reasoned | reasoned |
+| rung3 | run11 | failed | failed |
+| rung4 | run11 | reasoned | reasoned |
+
+**Other notes:** Once again, I didn't check how well the numbers fit. I noticed Claude was more thoroughly checking for errors in the data than GPT was, and gave many suggestions to make the data clearer. Claude also noticed some oddity in the data it seems GPT missed.
+
+I gave models "failed" only if they both didn't get the damped equation nor even considered the possibility of damping. I also gave "failed" if there was not even a mention of a spring-mass oscillator.
+I gave "recognized" unless there is actually some sort of explanation how the equation was gotten to, rather than just an explanation of the equation itself.
+This was the best approach I could come up with, but GPT implied, and Claude basically stated, that when they see the up and down swinging of oscillations, they assume it follows the sinusoidal model of C + A * cos(2pi/T(x-x0)) or something similar.
+For rung 3 run 11, both AIs seemed to reason well, but didn't offer any real processes that could have been involved. Claude seemed to be focused on AC singals, voltage, and DC offsets.
+
+**Answers to the 5 questions:**
+1) Both models handled the ladder the same according to the table, though I did notice Claude gave more detail. They both approached things differently, with GPT being more explanatory and Claude focusing more on searching for errors.
+2) Claude was a little better with telling run04 and run11 apart as it gave significantly more details about the decay factors. Overall, they both mainly gave differences behaviorally by focusing more heavily on the undamped equation for run11, except for in rung 1.
+3) Both models on rung 4 run11 gave high confidence (using the same 95% number) that it was oscillatory, and they both were not confident on the exact process. They both were very confident in rung 1, and less so confident in later rungs, but all throughout seemed mostly confident in the equation being oscillations. They were both very confident that there was no damping in run 11, despite the fact that basically any physical process is going to have (very light) damping because of entropy.
+4) The twin runs were good at showing error. The AIs reaching the same conclusion suggests that the data does have a pretty concrete pattern. The similarities suggest those equations are actually quite good guesses, but it could also mean the AIs were trained similarly and therefore see the same patterns, even if the patterns are wrong.
+5) The AIs behaving differently because they assumed different equations for run11 and run04 seems to haev held up as I predicted. The AIs did both consider damping a few times in run11, which means there is a little more going on than I thought there would be.
+
+What surprised me the most across this experiment was the actual damping itself, which eventually determined the runs that we would use. I did originally predict that the runs with larger masses and smallest paddles would damp the least (that run was run 11, which matches up), but it still felt counter intuitive. This only made sense to me because of the physics equations, but it sounds insane to say. The friction force, for example, increases with mass (mu*mg*costheta,most of the time.) 
+Designing the questions was an interesting challenge because it required carefully saying enough to get the AIs to discuss what I wanted them to without even hinting as to what I was doing. I couldn't even really say "experiment" as that could suggest what I did was measure controlled variables and almost completely eliminates possibilities like measuring the distribution of random numbers. Physics is concrete, writing is not.
+I don't think I would change how I use AIs in schoolwork. I have always tried to give them as much context as possible, and I have generally been good at catching their errors (which I have seen them make a few times). It seems newer models are better at doing this work, which makes them even better at what I use AIs for -- checking and understanding the process to get to my answers.
+
+**Data / files I created:** experiment/all_answers_readable_claude.md, experiment/data/claude_answers.csv
+
+**AI help today:** No AI help, just prompting.
+```
+
