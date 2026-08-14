@@ -1,7 +1,5 @@
-==========================================================
-This was rung1, run04.
-----------------------------------------------------------
-## The model
+model,rung,run,answer
+claude-opus-5,rung1,run04,"## The model
 
 Your data are a classic **damped (underdamped) harmonic oscillator**:
 
@@ -21,7 +19,7 @@ $$\boxed{y(t) \approx -3.4 \;+\; 3.3\,e^{-t/19\,\text{s}}\cos\!\big(8.50\,t\big)
 | $A_0$ | **≈ 3.3** | at $t=0$, $y=-0.05$, i.e. 3.3 above equilibrium | **Initial amplitude** = how far you pulled the mass from equilibrium before releasing. |
 | $\varphi$ | **≈ 0** | first data point is already at an extreme, first turning point at $t\approx0.35$ | **Phase**: you released from rest at maximum displacement, so a pure cosine works (no sine term needed). |
 | $\omega_d$ | **8.50 rad/s** | 46 full cycles between the turning points at $t=0.35$ s and $t=34.33$ s ⇒ $T = 33.98/46 = 0.739$ s, $f = 1.35$ Hz, $\omega=2\pi/T$ | **Angular frequency** of the oscillation, set by stiffness and mass: $\omega_0=\sqrt{k/m}$. |
-| $\tau$ | **≈ 19 s** (γ = 1/τ ≈ 0.053 s⁻¹) | peak height above equilibrium falls from ≈2.9 at $t=1.8$ s to ≈0.6 at $t=34$ s; amplitude half-life ≈ 13 s | **Decay time of the envelope**, caused by air drag on your paddle. $e^{-t/\tau}$ is the shrinking "amplitude" $A(t)=A_0e^{-t/\tau}$. |
+| $\tau$ | **≈ 19 s** (γ = 1/τ ≈ 0.053 s⁻¹) | peak height above equilibrium falls from ≈2.9 at $t=1.8$ s to ≈0.6 at $t=34$ s; amplitude half-life ≈ 13 s | **Decay time of the envelope**, caused by air drag on your paddle. $e^{-t/\tau}$ is the shrinking ""amplitude"" $A(t)=A_0e^{-t/\tau}$. |
 
 ## The physics behind it
 
@@ -43,13 +41,10 @@ So if you weighed the mass, $k \approx 72\,m$ (N/m with m in kg) and $b\approx 0
 * Predicted turning points $t = 0.37, 1.11, 1.85, \dots, 34.3$ s match your minima to within one sample.
 * Your sampling is only ~7.4 points per cycle, so recorded peaks systematically undershoot the true peaks; that's why $\tau$ is only good to about ±2 s. A proper nonlinear least-squares fit of all four parameters will tighten it.
 * The data are quantized (steps of ~0.048, changing to ~0.045 near $t\approx20.6$ s) — a sensor/calibration artifact, not physics.
-* Sign convention: at $t=0$ the reading is at its *largest* value, so in this data set "pulled down" corresponds to the less-negative direction (or the sensor sign is flipped). Flip the sign of $A_0$ if you want positive = downward.
-==========================================================
-This was rung2, run04.
-----------------------------------------------------------
-## Short answer
+* Sign convention: at $t=0$ the reading is at its *largest* value, so in this data set ""pulled down"" corresponds to the less-negative direction (or the sensor sign is flipped). Flip the sign of $A_0$ if you want positive = downward."
+claude-opus-5,rung2,run04,"## Short answer
 
-This is a classic **under‑damped (ringing) step response of a second‑order system**: the signal starts at 0, is "kicked" to a new equilibrium at about **−3.33**, overshoots to ≈ −6.3, and then rings at **1.36 Hz** while the ringing envelope decays with a time constant of tens of seconds (a very lightly damped, high‑Q resonator).
+This is a classic **under‑damped (ringing) step response of a second‑order system**: the signal starts at 0, is ""kicked"" to a new equilibrium at about **−3.33**, overshoots to ≈ −6.3, and then rings at **1.36 Hz** while the ringing envelope decays with a time constant of tens of seconds (a very lightly damped, high‑Q resonator).
 
 A one‑line fit that captures essentially all of it:
 
@@ -119,7 +114,7 @@ The sign (settling to a negative value) just means the step drove the variable n
 ## Instrumentation notes visible in the data
 
 * The values are **quantized**: for t < ~20.6 s every reading is an integer multiple of 0.04808; after that the step changes to 0.04464. That looks like an ADC/gain‑range change mid‑experiment. Resolution ≈ 0.045–0.048 units → don't quote fits to better than ~0.05.
-* Sampling is 10 Hz on a 1.36 Hz signal = **7.4 samples/cycle**. That's above Nyquist but you almost never land on a true peak, so peak‑picking underestimates amplitudes by up to ~9 % and jitters. (That's why the "first trough" reads −6.15 rather than the true ≈ −6.4.) Fit the model to all points instead of using peaks.
+* Sampling is 10 Hz on a 1.36 Hz signal = **7.4 samples/cycle**. That's above Nyquist but you almost never land on a true peak, so peak‑picking underestimates amplitudes by up to ~9 % and jitters. (That's why the ""first trough"" reads −6.15 rather than the true ≈ −6.4.) Fit the model to all points instead of using peaks.
 
 ---
 
@@ -128,11 +123,8 @@ The sign (settling to a negative value) just means the step drove the variable n
 1. FFT / Lomb periodogram → confirm a single sharp line at 1.358 Hz (no second mode, no beating).
 2. Take the **Hilbert‑transform envelope** of y(t) + 3.33; plot ln A vs t. Straight line ⇒ linear damping only; curved (as here) ⇒ add the A² term.
 3. Nonlinear least squares on the full model y = C + A(t)cos(ωt+φ) for (C, A₀, σ, k, ω, φ); or integrate the ODE and fit (m, c, β, k, F₀).
-4. Diagnostic for nonlinearity: check whether the **period changes with amplitude** (softening/hardening Duffing). Here T = 0.72–0.74 s early vs 0.734 s late — consistent with constant, i.e. the nonlinearity is in the *damping*, not the stiffness. Also check for a small amplitude‑independent decay floor (dry/Coulomb friction would instead make the envelope decay *linearly* in time — it doesn't).
-==========================================================
-This was rung3, run04.
-----------------------------------------------------------
-## Short answer
+4. Diagnostic for nonlinearity: check whether the **period changes with amplitude** (softening/hardening Duffing). Here T = 0.72–0.74 s early vs 0.734 s late — consistent with constant, i.e. the nonlinearity is in the *damping*, not the stiffness. Also check for a small amplitude‑independent decay floor (dry/Coulomb friction would instead make the envelope decay *linearly* in time — it doesn't)."
+claude-opus-5,rung3,run04,"## Short answer
 
 The data are a **damped (ringing) oscillation about a constant baseline**:
 
@@ -193,79 +185,9 @@ with $\omega_0=\sqrt{\omega^2+\lambda^2}\approx8.49$, damping ratio $\zeta=\lamb
 ## Caveats worth knowing
 
 - There are only ~7.4 samples per cycle ($\Delta x=0.1$, $T=0.74$), which is above Nyquist but barely. If the real signal were faster, this 0.74 period could be an alias (true frequency could be $10k\pm1.35$ cycles/unit). With only these data you can't tell.
-- The envelope decays a *little* slower than a pure exponential at large x. If you want a tighter empirical fit, $A(x)\approx\dfrac{3.2}{1+x/8}$ (a $1/x$-type envelope) reduces the envelope residuals by about half. But given the digitisation noise, the simple exponential model is the honest, physically meaningful choice.
-==========================================================
-This was rung4, run04.
-----------------------------------------------------------
-## Short answer
-
-This looks like the **step/impulse response of a lightly damped linear second‑order system** — a decaying sinusoid riding on a non‑zero offset:
-
-$$y(t)\;=\;y_\infty + A_0\,e^{-t/\tau}\cos(2\pi t/T+\varphi)$$
-
-with (my best estimates from the data):
-
-| parameter | estimate | how well constrained |
-|---|---|---|
-| period $T$ | **0.737 ± 0.005 s** ( $f=1.356$ Hz, $\omega_d=8.52$ rad/s) | very well (26 cycles of phase) |
-| asymptote $y_\infty$ | **−3.5 ± 0.2** | very well |
-| initial amplitude $A_0$ | ≈ 3.3 ± 0.4 | well |
-| phase $\varphi$ | ≈ 0 (starts **at an extremum**, i.e. released from rest / step at t=0) | well |
-| decay time $\tau$ | **~20 s (anywhere from ~12 to ~30 s)** | poorly |
-| ⇒ damping ratio $\zeta = 1/(\omega_0\tau)$ | ≈ 0.006 (0.004–0.01) | poorly |
-| ⇒ Q = 1/2ζ | ≈ 85 (50–130) | poorly |
-
-Equivalent ODE (unit step of size 3.5 applied at t = 0, system at rest):
-
-$$\ddot y + 2\zeta\omega_0\dot y + \omega_0^2 y = -3.5\,\omega_0^2 H(t),\qquad \omega_0\simeq 8.52\ \text{rad/s},\ \zeta\simeq 0.006$$
-
-$$y(t) = -3.5\left[1 - e^{-\zeta\omega_0 t}\left(\cos\omega_d t + \tfrac{\zeta\omega_0}{\omega_d}\sin\omega_d t\right)\right]\approx -3.5+3.5\,e^{-t/20}\cos(8.52\,t)$$
-
-## What in the data supports this
-
-1. **Strict periodicity.** Maxima occur at t ≈ 0.70, 1.45, 2.25, 2.95, 3.65 … and a clear one at t ≈ 19.87. That's 26 cycles in 19.17 s → T = 0.7373 s, and the early cycles give 0.7375 s. Period is constant to <1 % over the whole record.
-2. **Monotone envelope decay toward a fixed level.** Peak‑to‑trough span shrinks from 0→−6 (span ≈ 6) at the start to −3/−4 (span ≈ 1) after t ≈ 25, and the record is symmetric about −3.5 throughout. So it's *decay to a shifted equilibrium*, not to zero, and not a sustained/limit‑cycle oscillation.
-3. **y(0) sits at a maximum** (y(0) ≈ y(0.70) ≈ 0). Zero initial velocity ⇒ "released from displacement" or "step input at t = 0", not an impulse (which would start at a zero crossing with maximum slope).
-4. **Frequency does not change as the amplitude decays** → the restoring force is linear over this range (small‑amplitude regime); no evidence of a Duffing‑type nonlinearity.
-5. **Overshoot vs. decay are consistent with each other** for very light damping: the first swing overshoots the final value by ~95 % of the step, which requires ζ ≲ 0.02, and the slow envelope decay independently gives ζ ~ 0.006.
-
-## Plausible physical origins
-
-Any of these produce exactly this signature; the data alone can't distinguish them:
-
-- **Mechanical oscillator released/step‑forced:** mass–spring–damper, cantilever "twang", torsion balance, accelerometer or load cell responding to a suddenly applied weight. Here $k/m = \omega_0^2 = 72.6\ \mathrm{s^{-2}}$.
-- **Pendulum:** $L = g/\omega_0^2 = 9.81/72.6 = 13.5$ cm — a very reasonable small pendulum, and Q ≈ 85 is typical for air damping.
-- **Series RLC circuit / LC tank step response:** $\omega_0=1/\sqrt{LC}$, $\zeta = \frac{R}{2}\sqrt{C/L}$; final value = new DC level.
-- **Servo / PID position loop or a galvanometer‑type analog meter** settling to a new setpoint after a command step (classic under‑damped, poorly tuned loop).
-- **Anything thermal/chemical/diffusive is ruled out** — those give monotone exponential or over‑damped responses, not 47 oscillations.
-
-## Confidence, and the important caveats
-
-**High confidence (~95 %)** in the *qualitative* model (under‑damped 2nd‑order step response, offset −3.5, T = 0.737 s). Those features are over‑determined by the data.
-
-**Low confidence in the damping parameters**, for a concrete reason: **the measurement is quantized to integers**, and only 7 distinct levels (0 … −6) ever appear. That means:
-
-- Every reading has ±0.5 of rounding error, which is *larger* than the oscillation amplitude after t ≈ 25 s. The last third of the record contains essentially only one piece of information: the equilibrium is near −3.5 (the values alternate −3/−4 because the true value straddles −3.5).
-- A single exponential envelope with τ ≈ 15 s under‑predicts the amplitude at t ≈ 20 s, while τ ≈ 25 s over‑predicts it at t ≈ 9 s. So I can't rule out a **non‑exponential decay law** (e.g. two decay modes, or amplitude‑dependent/Coulomb friction). With this resolution you simply cannot tell.
-- There's also residual scatter of ±1 count against any smooth fit in the first few cycles → additive noise of order 0.3–0.6 units, comparable to the quantization step.
-
-**Two artifacts worth flagging so you don't over‑interpret them:**
-
-- **Apparent "beating" of the peak heights** (e.g. a lone −5 reappearing at t = 19.52 after a run of −4s). This is *not* physical amplitude modulation: T/Δt = 0.7373/0.1001 = 7.37 samples per cycle, a non‑integer, so the sampling grid slides through the waveform and catches the true peak with varying accuracy. Beat period ≈ 2 s, which matches what you see.
-- **Aliasing caveat.** At 10 samples/s you only see 1.356 Hz *if the signal is band‑limited below 5 Hz*. Formally the true frequency could be $10k \pm 1.356$ Hz (8.64 Hz, 11.36 Hz, …). Physical plausibility favors 1.356 Hz, but the data cannot prove it.
-
-Minor note: your timestamps step by 0.1001 s, not 0.100 s (t = 34.835 at sample 348). Negligible here, but it means a stated "10 Hz" clock is actually 9.99 Hz.
-
-## How to firm it up
-
-1. **Increase measurement resolution** (more ADC bits, or amplify/offset so the signal spans the full range). With ±0.5 quantization you're throwing away the entire late‑time signal. Alternatively, add deliberate dither noise and average.
-2. **Fit properly with the quantizer in the model** — maximum likelihood on $P(\text{round}(y)=n)$, not least squares on the rounded values; otherwise your τ will be biased.
-3. **Plot log(envelope) vs t.** A straight line ⇒ linear viscous damping; a straight line in *amplitude* vs t ⇒ dry/Coulomb friction; curvature ⇒ mixed or amplitude‑dependent losses.
-4. **Repeat with different initial amplitudes.** If T is unchanged, the system is linear (confirming the model); if T drifts with amplitude, you have a nonlinear spring and need a Duffing/pendulum treatment.
-5. **Sample faster (≥50 Hz)** to kill the aliasing ambiguity and resolve the peaks directly.==========================================================
-This was rung1, run11.
-----------------------------------------------------------
-## The model
+- The envelope decays a *little* slower than a pure exponential at large x. If you want a tighter empirical fit, $A(x)\approx\dfrac{3.2}{1+x/8}$ (a $1/x$-type envelope) reduces the envelope residuals by about half. But given the digitisation noise, the simple exponential model is the honest, physically meaningful choice."
+claude-opus-5,rung4,run04,NO TEXT RETURNED (stop_reason: max_tokens)
+claude-opus-5,rung1,run11,"## The model
 
 Your data is a classic **under‑damped (lightly damped) harmonic oscillator**:
 
@@ -306,12 +228,9 @@ $$y(t)\;\approx\;-21.9 \;+\; 3.6\,e^{-t/400}\cos(7.317\,t-1.72)\ \text{cm}$$
 
 1. **Your damping is tiny.** Over the whole 35 s record the amplitude only falls from ≈3.65 cm to ≈3.35 cm (~8%), which is barely above your noise/resolution (~±0.05–0.1 cm). Damping ratio $\zeta=\gamma/\omega_0\approx3\times10^{-4}$, Q ≈ 1500. So γ is poorly determined — treat 0.0025 s⁻¹ as an order‑of‑magnitude. To measure the paddle's effect properly, record for several minutes, use a bigger paddle, and fit ln(peak amplitude) vs. time (should be a straight line of slope −γ).
 2. Because $\gamma\lll\omega_0$, the damped and undamped frequencies are identical to 7 decimal places here — the paddle doesn't measurably change the period.
-3. The apparent "wandering" of the peaks in your printed table (peaks at 0.70, 1.50, 2.40, 3.30 s…) is **not** physics — it's because your 0.1 s sampling interval doesn't divide the 0.8587 s period evenly, so the sample grid drifts through the waveform.
-4. If air drag were quadratic ($\propto v^2$) rather than linear, the envelope would decay like $1/(1+ct)$ instead of exponentially; with this little decay you can't distinguish the two, so the linear (exponential) model is the right thing to quote.
-==========================================================
-This was rung2, run11.
-----------------------------------------------------------
-## Short answer
+3. The apparent ""wandering"" of the peaks in your printed table (peaks at 0.70, 1.50, 2.40, 3.30 s…) is **not** physics — it's because your 0.1 s sampling interval doesn't divide the 0.8587 s period evenly, so the sample grid drifts through the waveform.
+4. If air drag were quadratic ($\propto v^2$) rather than linear, the envelope would decay like $1/(1+ct)$ instead of exponentially; with this little decay you can't distinguish the two, so the linear (exponential) model is the right thing to quote."
+claude-opus-5,rung2,run11,"## Short answer
 
 Your data are a clean, **steady (non‑decaying) sinusoid sitting on a large negative DC offset**, sampled at ~10 Hz. Everything in the file is described by three numbers plus a phase:
 
@@ -383,11 +302,8 @@ Then check the residuals:
 - flat, white residuals → the pure sinusoid is the whole story;
 - residuals at $2\omega,3\omega$ → nonlinear oscillator / distorted drive (fit $\sum_k A_k\cos(k\omega t+\phi_k)$);
 - residuals growing/shrinking linearly in a slow envelope → add $e^{-t/\tau}$ (damping) or a second close frequency $\omega_2$ (beating);
-- a slow trend → add $C_0+C_1t$ (drift, thermal or otherwise).
-==========================================================
-This was rung3, run11.
-----------------------------------------------------------
-## Short answer
+- a slow trend → add $C_0+C_1t$ (drift, thermal or otherwise)."
+claude-opus-5,rung3,run11,"## Short answer
 
 The two columns are related by a single sinusoid (a DC‑offset sine wave):
 
@@ -424,12 +340,12 @@ Instead of measuring one cycle (bad, because of the coarse sampling), I located 
 | maxima | t = 0.237 | t = 33.730 | 39 |
 | minima | t = 0.665 | t = 34.151 | 39 |
 
-Each gives $(T = \Delta t/39 \approx 0.8586,\;0.8590,\;0.8584)$ → **T = 0.8587 s**, so
-$(f = 1/T = 1.1646\ \text{Hz})$, $(\omega = 2\pi f = 7.317\ \text{rad/s})$.
-(Intermediate peaks/minima all fall within ±0.02 s of $(t_0+nT)$ — confirming a *single*, constant frequency.)
+Each gives \(T = \Delta t/39 \approx 0.8586,\;0.8590,\;0.8584\) → **T = 0.8587 s**, so
+\(f = 1/T = 1.1646\ \text{Hz}\), \(\omega = 2\pi f = 7.317\ \text{rad/s}\).
+(Intermediate peaks/minima all fall within ±0.02 s of \(t_0+nT\) — confirming a *single*, constant frequency.)
 
-**4. Phase from the peak positions.** The maxima obey $(t_{\max}\approx0.237+nT)$. A sine peaks when its argument is $(\pi/2)$:
-$(\phi = \pi/2-\omega(0.237) = 1.571-1.733 = -0.163\ \text{rad})$.
+**4. Phase from the peak positions.** The maxima obey \(t_{\max}\approx0.237+nT\). A sine peaks when its argument is \(\pi/2\):
+\(\phi = \pi/2-\omega(0.237) = 1.571-1.733 = -0.163\ \text{rad}\).
 
 **5. Check.**
 
@@ -447,11 +363,8 @@ $(\phi = \pi/2-\omega(0.237) = 1.571-1.733 = -0.163\ \text{rad})$.
 ## Two things worth noting about the data itself
 
 - **Quantisation:** column 2 only ever takes values spaced ≈0.049 apart (…−18.28, −18.33, −18.38, −18.43…). That's a 10‑bit ADC step (50/1024 ≈ 0.0488), so this looks like a digitised voltage: an AC signal of amplitude ~3.5 V riding on a −21.9 V DC offset. The ±0.02–0.3 scatter in the sampled peak heights from cycle to cycle is just this quantisation plus the fact that samples rarely land exactly on a peak — it is *not* real amplitude modulation.
-- **Aliasing caveat:** with Δt ≈ 0.1 s (10 Hz sampling) you only get ~8.6 samples per cycle. The fitted 1.165 Hz is the lowest frequency consistent with the data; formally 10k ± 1.165 Hz (8.835 Hz, 11.165 Hz, …) would fit the samples equally well. Assuming the signal was properly sampled, 1.165 Hz is the answer.
-==========================================================
-This was rung4, run11.
-----------------------------------------------------------
-## What the data itself says
+- **Aliasing caveat:** with Δt ≈ 0.1 s (10 Hz sampling) you only get ~8.6 samples per cycle. The fitted 1.165 Hz is the lowest frequency consistent with the data; formally 10k ± 1.165 Hz (8.835 Hz, 11.165 Hz, …) would fit the samples equally well. Assuming the signal was properly sampled, 1.165 Hz is the answer."
+claude-opus-5,rung4,run11,"## What the data itself says
 
 Stripping it down to measurable features:
 
@@ -479,7 +392,7 @@ with
 - ω = 7.31 ± 0.02 rad s⁻¹ (T = 0.860 s, f = 1.163 Hz)
 - φ ≈ 0.0 ± 0.05 rad (the signal is crossing its mean going upward at t = 0; first peak at t ≈ 0.217 s ≈ T/4)
 
-i.e. roughly **y(t) ≈ −22 + 4 sin(7.31 t)**. Spot checks: t = 0.701 → −25.7 (data −26); t = 1.101 → −18.1 (−18); t = 22.422 → −19.9 (−20); t = 34.735 → −19.7 (−20). Residuals are ≤ 0.5 everywhere I checked, i.e. **the only "noise" in this data set is the integer rounding** — there is no evidence of measurement noise, drift, or nonlinearity above ~½ count.
+i.e. roughly **y(t) ≈ −22 + 4 sin(7.31 t)**. Spot checks: t = 0.701 → −25.7 (data −26); t = 1.101 → −18.1 (−18); t = 22.422 → −19.9 (−20); t = 34.735 → −19.7 (−20). Residuals are ≤ 0.5 everywhere I checked, i.e. **the only ""noise"" in this data set is the integer rounding** — there is no evidence of measurement noise, drift, or nonlinearity above ~½ count.
 
 One thing worth flagging: the peaks alternate between −18 and −19 and the troughs between −25 and −26 in a slowly shifting pattern. That is *not* real amplitude modulation — it's the beat between the 0.860 s period and the 0.1001 s sampling interval (8.59 samples/cycle, incommensurate), so the samples land at different phases relative to the true peak each cycle. Reading it as a beat/AM effect would be the classic mistake here.
 
@@ -496,7 +409,7 @@ Constant amplitude over 40 cycles is the informative part. Free oscillation with
 - **Steady-state forced mechanical or electrical oscillation** — a shaker table, an AC signal on a DC bias, an oscillator circuit output. A negative offset of −22 with ±4 swing smells like a level measured against a reference (dBm, pressure relative to ambient, temperature in °C, a bipolar-ADC channel with a DC bias).
 - **A pendulum**: T = 0.860 s → L = gT²/4π² = 0.184 m (an 18.4 cm pendulum). Amplitude constant, so it must be driven (clock escapement, motor) or extremely low-loss.
 - **Mass–spring/LC resonator**: k/m = 53.4 s⁻², or 1/LC = 53.4 s⁻².
-- **Biological/physiological rhythm** (~70 "beats"/min), or a controlled system hunting sinusoidally around a setpoint.
+- **Biological/physiological rhythm** (~70 ""beats""/min), or a controlled system hunting sinusoidally around a setpoint.
 
 Things I can rule out from the data: exponential growth or decay, transients, linear drift, multiple incommensurate frequencies (no beating beyond the sampling artefact), and relaxation-type waveforms (a thermostat/charging cycle would give sawtooth or triangular shape, not this symmetric one).
 
@@ -505,7 +418,7 @@ Things I can rule out from the data: exponential growth or decay, transients, li
 - **High (>95 %)**: the data are a single sinusoid plus constant offset, quantized to integers, with no additional noise. The residual structure (everything within ±0.5, symmetric waveform, stable peak/trough levels) supports this strongly.
 - **High** on T = 0.860 s and mean = −21.9; **moderate** on A (3.9 vs 4.0) and on φ, because 1-count quantization plus 8.6 samples/cycle blurs the extremes.
 - **Low** on the physical mechanism. Dozens of processes produce a steady sinusoid; nothing in these numbers picks one out. I also don't know the units or the instrument, which is where most of the identification would come from.
-- **Important caveat — aliasing.** At 10 Hz sampling you cannot distinguish 1.163 Hz from 8.837 Hz, 11.163 Hz, 18.837 Hz, … (10k ± 1.163). If the underlying phenomenon could be faster than 5 Hz, the "period" above may be an alias. Similarly, harmonic distortion up to a few percent, or any content above 5 Hz, is invisible here.
+- **Important caveat — aliasing.** At 10 Hz sampling you cannot distinguish 1.163 Hz from 8.837 Hz, 11.163 Hz, 18.837 Hz, … (10k ± 1.163). If the underlying phenomenon could be faster than 5 Hz, the ""period"" above may be an alias. Similarly, harmonic distortion up to a few percent, or any content above 5 Hz, is invisible here.
 
 ## How to firm it up
 
@@ -513,4 +426,4 @@ Things I can rule out from the data: exponential growth or decay, transients, li
 2. Improve resolution (more ADC bits, or scale/offset the signal so the ±4 swing fills the range) — you're currently using ~8 of your available counts.
 3. Record for several minutes to test for damping, slow drift in offset, or frequency wander (an externally driven system should be phase-locked and stable; a limit cycle will show slow phase diffusion).
 4. Fix the timebase: the 0.1 % accumulating drift in your timestamps biases frequency estimates at the level of your quoted precision.
-5. Diagnostic test: cut the suspected drive. If the oscillation stops or decays, it's forced; if it persists, it's self-sustained or high-Q free.
+5. Diagnostic test: cut the suspected drive. If the oscillation stops or decays, it's forced; if it persists, it's self-sustained or high-Q free."

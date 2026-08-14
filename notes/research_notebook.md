@@ -502,3 +502,57 @@ I don't think I would change how I use AIs in schoolwork. I have always tried to
 **AI help today:** No AI help, just prompting.
 ```
 
+```
+### August 13 — Comparing my numbers to the AIs
+
+**Goal today:** Get Claude results for rung 4 and comparing the numbers the AIs gave me.
+
+**What worked:** I got an answer from claude attempt 1 this time.
+
+**Updated table:** 
+| rung | run | gpt | claude |
+|---|---|---|---|
+| rung1 | run04 | recognized | recognized |
+| rung2 | run04 | recognized | recognized |
+| rung3 | run04 | reasoned | reasoned |
+| rung4 | run04 | recognized | reasoned |
+| rung1 | run11 | recognized | recognized |
+| rung2 | run11 | reasoned | reasoned |
+| rung3 | run11 | failed | failed |
+| rung4 | run11 | reasoned | reasoned |
+
+
+| model | rung | run | claimed omega | claimed gamma | percent off omega | percent off gamma |
+|---|---|---|---|---|---|---|
+| gpt | rung1 | run04 | 8.5 | 0.05 |  -0.280368765920688 | -5.216585986479825. |
+| gpt | rung2 | run04 | 8.5 | 0.05 | -0.280368765920688 | -5.216585986479825 |
+| gpt | rung3 | run04 | 8.53 | 0.08 | 0.0715828737289962 | 51.65346242163228 |
+| gpt | rung4 | run04 | 8.1 | 0.06 | -4.973057294583248 | 13.7400968162242 |
+| gpt | rung1 | run11 | 7.3 | 0.003 | -0.22608471858027845 | -12.360691086681076 |
+| gpt | rung2 | run11 | 5.409822549481624 | none | -0.25965371008588084 | N/A |
+| gpt | rung3 | run11 | 5.403539364174444 | none | -0.1436765632371389 | N/A |
+| gpt | rung4 | run11 | 5.661149961768808 | none | -4.687638007085407 | N/A |
+| claude | rung1 | run04 | 8.5 | 0.05263157894736842 | -0.280368765920688 | -0.22798524892614233 |
+| claude | rung2 | run04 | 8.53 | 0.05 | 0.0715828737289962 | -5.216585986479825 |
+| claude | rung3 | run04 | 8.49 | 0.05 | -0.39768597913724935 | -5.216585986479825 |
+| claude | rung4 | run04 | 8.51999927653552 | 0.05 | -0.04574282697122404 | -5.216585986479825 |
+| claude | rung1 | run11 | 7.317 | 0.0025 | 0.006265495088785938 | -26.96724257223423 |
+| claude | rung2 | run11 | 7.315 | none | -0.021069824166394538 | N/A |
+| claude | rung3 | run11 | 7.317 | none | 0.006265495088785938 | N/A |
+| claude | rung4 | run11 | 7.307344512249859 | none | -0.12570242501852466 | N/A |
+
+**notes:** Rung 1 run11 with gpt used beta, I ran it as if beta is gamma, but did note this down. I noticed some small things, like the models sometimes using lambda (which appears almost identical to gamma), but I treated that as gamma because it matches perfectly in the provided equations. I put those notes in the code.
+
+1) Overall the AIs had extremely similar accuracies, though claude was more accurate, especially with gamma. ChatGPT completely messed up one of the gamma values, and overall was a bit less accurate. They were both really close most of the time, though did have a high error on rung 1 run 11 due to gamma being so small.
+2) Both models didn't really comment on confidence, though did slightly imply lower confidence on later rungs, which mostly matches with their errors. On rung4, they both claimed very high confidence on the general equation and general numbers, though neither said their numbers were perfect and claude even said that the exact parameters were probably off due to the rounding.
+3) The lack of a decay term was a combination of something caused by the data and prompting. Both dropped the term when I didn't mention the existance of paddles, but they justified not having it (most of the time) by saying there is either no damping, or the damping is negligible. 
+
+**AI conclusion:**  ChatGPT and Claude are two of the most advanced AIs there are. They could look at a bunch of data without even knowing what the numbers mean, and come up with an equation to fit the data. Both AIs acted very similar throughout the ladder, following the patterns when they were told more, sometimes reasoning when they were told less, and sometimes failing to reach the proper solution entirely. 
+On the first prompt, when they were told basically everything, both times the AIs successfully pattern matched with what they had seen before, knowing that the mass-spring system is oscillations. They used this information, along with the information about the paddles, to successfully come to the correct general equation. Interestingly,  not giving this information while giving the same data sometimes altered the equation. When only told the time, in rung 2, they again seemed to pattern match with the damped data. They didn't seem to provide any reasoning, but rather recognized the oscillations and came to the equation. What is interesting is when given the data with less damping, they actually seemed to reason the equation. One possible reason this seemed to happen is that they decided to justify why there was no damping factor in their equation, though that a damping factor could be possible. Rung 3, with the information that the first column is time hidden, seemed to challenge the AIs more. They paid more attention to the data, and managed to reason their way to the equations. They reasoned why there should be a damping factor in the more damped run, but left the factor out in the less damped run. They seemed to both not even acknowledge damping this time, but also did not even acknowledge the physical processes that could have been involved (or in the case of Claude, hyper focused on unecessary specifics). Finally, on the last rung, there was a difference between the models. In the run that was less damped, both successfully reasoned through their equations. What is interesting is that when there was more damping, GPT seemed to have pattern matched whereas Claude actually explained its answer. This was an interesting difference, but it is one of many.
+This agreement seems to show some small differences in the way the models behave, but the difference only occured once. Additionally, while the models acted as though they reasoned some of the time, they also showed signs of patttern matching. In one case, Claude even said that the data had oscillations the "signature" of the governing equation. The slight difference between the models, and the fact they chose a different equation with different prompts, is also something that would be present in humans. These similarities and oddities in their reasoning could be caused by anything from similar training data to the fact they are trained to be somewhat similar to humans. The data can support such conclusions, but at the same time also supports that the AIs are just really good pattern matchers and isn't completely proof they can reason. Additionally, the AIs are extremely confident, but that confidence doesn't seem to hold up. First, it is important to distinguish the confidence they claimed and the confidence they showed. Both models claimed to be very confident with their numbers when asked, but also give a ton of other explanations and equations to everything they said, suggesting that they not have been as confident as they claimed. They were correct to not be completely confident on the physical processes as they gave many example, not all of which were mass-spring systems, but the numbers are another story. The percent error on rung 4 for both runs is some of the highest error for both AIs, yet they also both claimed "high confidence" in their numbers. Their numbers were indeed quite close to the actual numbers, but that "high confidence" claim doesn't really hold up well; Claude even mentioned that it didn't know if its numbers were actually correct despite claiming to be confident on its numbers at one point. Rung 1 was a great run to act as basically a control run, testing if the models can get to the answer at all when everything is handed to them. Rung 2 is a good run for seeing if removing just a few pieces of information drastically changes the answer, and it also supports rung 4. Rung 3 was an interesting rung since it doesn't really ask for a process (hence why the AIs didnt provide one), but it still does somewhat test reasoning while not even asking for it. Ultimately, rung 4 was the best test instrument because it confronted the AIs directly asking for their confidence, while also hinting that reasoning was wanted (without explicitely asking for it). 
+
+**Data / files I created:** experiment/comparing_to_AIs.py
+
+**What else:** If I had another week to test these models, I think I would stick to the idea of changing the units, and maybe even organizing by height rather than time. The idea of changing units feels like it would be the best test because there is a low chance the AIs are trained on any data with odd units for something like harmonic motion. This test way line up with real life because right now it may seem crazy to do an experiment and organize by something as crazy as arctan(time), but perhaps that will reveal a secret we need to discover more. AIs would have to be able to reason even with oddities like that in play if they are to truly assist us in the future. I think if this were to be tested, they would fail if the units are obscure enough, but could maybe survive a rung or 2 with a simple change like time in seconds squared. Shuffling the data to organize by something else might be a helpful tool as it would also show up in real physics, but I imagine the AIs would just change it to be by time before doing any calculations.
+```
+

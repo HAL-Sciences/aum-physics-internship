@@ -20,13 +20,13 @@ client = anthropic.Anthropic()
 # STEP 1: paste your four prompts here, copied from ask_claude.py.
 # They have to be the same prompts, or this answer would not be comparable
 # to the other seven.
-rung1 = """ """
+rung1 = """ I did an experiment where I pulled down and released a mass hanging from a spring with a paddle adding air resistance. The first column is time in seconds, and the second is vertical displacement. What equation describes this motion and what does each part of it mean?"""
 
-rung2 = """ """
+rung2 = """I did an experiment, and here is the data that came from it. The first column is time in seconds, and the second is a measurement. What processes could produce this data and what equations would fit it?"""
 
-rung3 = """ """
+rung3 = """I have this data with 2 columns, column 1 and column 2. Find some equation that can relate the data in these columns and explain how you got to it."""
 
-rung4 = """ """
+rung4 = """I did an experiment, and here is the data that came from it. The first column is time in seconds, and the second is a measurement. What processes could produce this data and what equations would fit it? How confident are you in your answer and what in the data supports it?"""
 
 prompts = {'rung1': rung1, 'rung2': rung2, 'rung3': rung3, 'rung4': rung4}
 
