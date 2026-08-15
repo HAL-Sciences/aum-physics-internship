@@ -556,3 +556,11 @@ This agreement seems to show some small differences in the way the models behave
 **What else:** If I had another week to test these models, I think I would stick to the idea of changing the units, and maybe even organizing by height rather than time. The idea of changing units feels like it would be the best test because there is a low chance the AIs are trained on any data with odd units for something like harmonic motion. This test way line up with real life because right now it may seem crazy to do an experiment and organize by something as crazy as arctan(time), but perhaps that will reveal a secret we need to discover more. AIs would have to be able to reason even with oddities like that in play if they are to truly assist us in the future. I think if this were to be tested, they would fail if the units are obscure enough, but could maybe survive a rung or 2 with a simple change like time in seconds squared. Shuffling the data to organize by something else might be a helpful tool as it would also show up in real physics, but I imagine the AIs would just change it to be by time before doing any calculations.
 ```
 
+```
+### August 14 — Codecademy Dictionaries
+
+**Goal today:** Complete the first half of the dictionary module in Codecademy
+
+**What worked:** I had no issues with completing the lesson nor quiz. I noticed that pandas dataframes use {}, which I didn't understand at the time, but now it makes sense that they are simply dictionaries. Working with dictionaries wasn't too hard because I am already familiar with working with pandas dataframes.
+```
+
