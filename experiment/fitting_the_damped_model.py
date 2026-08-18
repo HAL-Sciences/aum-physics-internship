@@ -60,7 +60,8 @@ residual_old = run04.sub(fit_frame_old, axis = 0)
 residual_old['t'] = run04['t']
 
 plot_list([residual, residual_old])
-plt.legend(['new residual', 'old residual'])
+plt.legend(['damped fit residual', 'simple fit residual'])
 plt.ylim(-2, 2)
+plt.savefig('figures/residuals_fit_run04.png', dpi=200, bbox_inches='tight')
 plt.show()
 

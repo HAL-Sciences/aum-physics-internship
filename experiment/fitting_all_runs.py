@@ -80,4 +80,5 @@ for index in range(0,15):
     fit_frame['t'] = run_frames[index]['t']
     plot_list([run_frames[index], fit_frame])
     plt.legend([run_numbers[index] + ' raw', 'fit'])
-    plt.show()
+    plt.savefig('figures/fit_' + run_numbers[index] + '.png', dpi=200, bbox_inches='tight')
+    plt.close()

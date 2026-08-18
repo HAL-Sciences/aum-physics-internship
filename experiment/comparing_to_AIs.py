@@ -44,39 +44,41 @@ def percent_error(actual, claimed):
 
 # for all runs, I assumed gamma and lambda are the same
 #    I did this once with gpt, then replaced all mentions of gpt with claude for the second round
-# claimed_values_omega_gpt = [8.5, 8.5, 8.53, 8.1, 7.3, 0.861, 0.860, 0.901]
-# omega_type_gpt = ['omega', 'omega', 'omega', 'omega', 'omega', 'T', 'T', 'T']
-# claimed_values_gamma_gpt = [0.05, 0.05, 0.08, 0.06, 0.003, 0, 0, 0]
-# gamma_type_gpt = ['gamma', 'gamma', 'gamma', 'gamma', 'gamma', 'none', 'none', 'none'] 
-# notes_gpt = ['', '', 'slightly different equation, no variable names for gamma', 'may work better for rounded numbers', 'beta instead of gamma', '', '', '']
+claimed_values_omega_gpt = [8.5, 8.5, 8.53, 8.1, 7.3, 0.861, 0.860, 0.901]
+omega_type_gpt = ['omega', 'omega', 'omega', 'omega', 'omega', 'T', 'T', 'T']
+claimed_values_gamma_gpt = [0.05, 0.05, 0.08, 0.06, 0.003, 0, 0, 0]
+gamma_type_gpt = ['gamma', 'gamma', 'gamma', 'gamma', 'gamma', 'none', 'none', 'none'] 
+notes_gpt = ['', '', 'slightly different equation, no variable names for gamma', 'may work better for rounded numbers', 'beta instead of gamma', '', '', '']
 claimed_values_omega_claude = [8.5, 8.53, 8.49, 1.356, 7.317, 7.315, 7.317, 1.163]
 omega_type_claude = ['omega', 'omega','omega', 'f', 'omega', 'omega', 'omega', 'f']
 claimed_values_gamma_claude = [19, 20, .05, 20, 400, 0, 0, 0]
 gamma_type_claude = ['tau', 'tau','gamma', 'tau', 'tau', 'none', 'none', 'none'] 
 notes_claude = ['', 'wrote it as if its tau, but also gave zeta', '', 'gave tau and zeta, used tau for consistency', '', '', '', '']
 
+def get_values(model, omega_val, omega_type, gamma_val, gamma_type, notes):
+    for i in range(len(omega_val)):
+        print('=======================================')
+        omega = find_omega(omega_type[i], omega_val[i])
+        gamma = find_gamma(gamma_type[i], gamma_val[i], omega)
+        print('For {n}, {m} predicted an omega value of {omega}, and a gamma value of {gamma}'.format(n=i+1, omega=omega, gamma=gamma, m = model))
+        if i < 4:
+            actual_gamma = run04_gamma
+            actual_omega = run04_omega
+        else:
+            actual_gamma = run11_gamma
+            actual_omega = run11_omega
+        gamma_error = percent_error(actual_gamma, gamma)
+        omega_error = percent_error(actual_omega, omega)
+        print('The gamma error was {g_err}. The omega error was {o_err}'.format(g_err = gamma_error, o_err = omega_error))
+        print(notes[i] + '\n')
+        if gamma == 0:
+            gamma = 'none'
+            gamma_error = 'N/A'
+        if actual_omega == run04_omega:
+            run = 'run04'
+        else:
+            run = 'run11'
+        print('| {} | {} | {} | {} | {} | {} | {} |'.format(model, 'rung'+str((i%4)+1), run, omega, gamma, omega_error, gamma_error))
 
-for i in range(len(claimed_values_omega_claude)):
-    print('=======================================')
-    omega = find_omega(omega_type_claude[i], claimed_values_omega_claude[i])
-    gamma = find_gamma(gamma_type_claude[i], claimed_values_gamma_claude[i], omega)
-    print('For {n}, Claude predicted an omega value of {omega}, and a gamma value of {gamma}'.format(n=i+1, omega=omega, gamma=gamma))
-    if i < 4:
-        actual_gamma = run04_gamma
-        actual_omega = run04_omega
-    else:
-        actual_gamma = run11_gamma
-        actual_omega = run11_omega
-    gamma_error = percent_error(actual_gamma, gamma)
-    omega_error = percent_error(actual_omega, omega)
-    print('The gamma error was {g_err}. The omega error was {o_err}'.format(g_err = gamma_error, o_err = omega_error))
-    print(notes_claude[i] + '\n')
-    if gamma == 0:
-        gamma = 'none'
-        gamma_error = 'N/A'
-    if actual_omega == run04_omega:
-        run = 'run04'
-    else:
-        run = 'run11'
-    print('| {} | {} | {} | {} | {} | {} | {} |'.format('claude', 'rung'+str((i%4)+1), run, omega, gamma, omega_error, gamma_error))
-    
+# get_values("gpt", claimed_values_omega_gpt, omega_type_gpt, claimed_values_gamma_gpt, gamma_type_gpt, notes_gpt)
+get_values("claude", claimed_values_omega_claude, omega_type_claude, claimed_values_gamma_claude, gamma_type_claude, notes_claude)

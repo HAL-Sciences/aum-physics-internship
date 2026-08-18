@@ -11,8 +11,10 @@ def scatter_plot(C1, C2):
     plt.grid(True, linestyle='--', alpha=0.3) # adds a grid
 
 scatter_plot('mass_grams', 'omega')
+plt.savefig('figures/omega_vs_mass.png', dpi=200, bbox_inches='tight')
 plt.show()
 scatter_plot('paddle_inches', 'gamma')
+plt.savefig('figures/gamma_vs_paddle.png', dpi=200, bbox_inches='tight')
 plt.show()
 
 print('runs 1 and 5')

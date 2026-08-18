@@ -564,3 +564,63 @@ This agreement seems to show some small differences in the way the models behave
 **What worked:** I had no issues with completing the lesson nor quiz. I noticed that pandas dataframes use {}, which I didn't understand at the time, but now it makes sense that they are simply dictionaries. Working with dictionaries wasn't too hard because I am already familiar with working with pandas dataframes.
 ```
 
+```
+### [August 17] — Prepparing to write
+
+**Goal today:** Fix my table and decide which figures to keep.
+
+**What I tried:**
+(Steps, in order. Be specific enough to repeat.)
+
+**Old Table (Wrong):**
+| model | rung | run | claimed omega | claimed gamma | percent off omega | percent off gamma |
+|---|---|---|---|---|---|---|
+| gpt | rung1 | run04 | 8.5 | 0.05 |  -0.280368765920688 | -5.216585986479825. |
+| gpt | rung2 | run04 | 8.5 | 0.05 | -0.280368765920688 | -5.216585986479825 |
+| gpt | rung3 | run04 | 8.53 | 0.08 | 0.0715828737289962 | 51.65346242163228 |
+| gpt | rung4 | run04 | 8.1 | 0.06 | -4.973057294583248 | 13.7400968162242 |
+| gpt | rung1 | run11 | 7.3 | 0.003 | -0.22608471858027845 | -12.360691086681076 |
+| gpt | rung2 | run11 | 5.409822549481624 | none | -0.25965371008588084 | N/A |
+| gpt | rung3 | run11 | 5.403539364174444 | none | -0.1436765632371389 | N/A |
+| gpt | rung4 | run11 | 5.661149961768808 | none | -4.687638007085407 | N/A |
+| claude | rung1 | run04 | 8.5 | 0.05263157894736842 | -0.280368765920688 | -0.22798524892614233 |
+| claude | rung2 | run04 | 8.53 | 0.05 | 0.0715828737289962 | -5.216585986479825 |
+| claude | rung3 | run04 | 8.49 | 0.05 | -0.39768597913724935 | -5.216585986479825 |
+| claude | rung4 | run04 | 8.51999927653552 | 0.05 | -0.04574282697122404 | -5.216585986479825 |
+| claude | rung1 | run11 | 7.317 | 0.0025 | 0.006265495088785938 | -26.96724257223423 |
+| claude | rung2 | run11 | 7.315 | none | -0.021069824166394538 | N/A |
+| claude | rung3 | run11 | 7.317 | none | 0.006265495088785938 | N/A |
+| claude | rung4 | run11 | 7.307344512249859 | none | -0.12570242501852466 | N/A |
+
+**Corrected Table:**
+| model | rung | run | claimed omega | claimed gamma | percent off omega | percent off gamma |
+|---|---|---|---|---|---|---|
+| gpt | rung1 | run04 | 8.5 | 0.05 | -0.280368765920688 | -5.216585986479825 |
+| gpt | rung2 | run04 | 8.5 | 0.05 | -0.280368765920688 | -5.216585986479825 |
+| gpt | rung3 | run04 | 8.53 | 0.08 | 0.0715828737289962 | 51.65346242163228 |
+| gpt | rung4 | run04 | 8.1 | 0.06 | -4.973057294583248 | 13.7400968162242 |
+| gpt | rung1 | run11 | 7.3 | 0.003 | -0.22608471858027845 | -12.360691086681076 |
+| gpt | rung2 | run11 | 7.2975439107776845 | none | -0.25965371008588084 | N/A |
+| gpt | rung3 | run11 | 7.306029426953008 | none | -0.1436765632371389 | N/A |
+| gpt | rung4 | run11 | 6.973568598423514 | none | -4.687638007085407 | N/A |
+| claude | rung1 | run04 | 8.5 | 0.05263157894736842 | -0.280368765920688 | -0.22798524892614233 |
+| claude | rung2 | run04 | 8.53 | 0.05 | 0.0715828737289962 | -5.216585986479825 |
+| claude | rung3 | run04 | 8.49 | 0.05 | -0.39768597913724935 | -5.216585986479825 |
+| claude | rung4 | run04 | 8.51999927653552 | 0.05 | -0.04574282697122404 | -5.216585986479825 |
+| claude | rung1 | run11 | 7.317 | 0.0025 | 0.006265495088785938 | -26.96724257223423 |
+| claude | rung2 | run11 | 7.315 | none | -0.021069824166394538 | N/A |
+| claude | rung3 | run11 | 7.317 | none | 0.006265495088785938 | N/A |
+| claude | rung4 | run11 | 7.307344512249859 | none | -0.12570242501852466 | N/A |
+
+
+**Table notes:** The omega values for gpt do not match up on rungs 2-4 run11. I remember realizing I accidentally wrote `*` instead of `/` in the equation with period so I re ran the code and corrected the error percentages, but it seems I forgot to fix the claimed omega values. I ran the code again and used the frequency equation instead, and the claimed omega values I had on the old table were what showed up. The new values are the corrected ones. Instead of 5.409822549481624, 5.403539364174444, and 5.661149961768808, the actual numbers were 7.2975439107776845, 7.306029426953008, and 6.973568598423514.
+
+
+**Data / files I created:** figures folder, and the figures for all 15 runs as well as gamma vs paddle, omega vs mass, residuals fit run04.
+
+**Figures kept:** 
+fit_run04.png, fit_run11.png, fit_run15.png, gamma_vs_paddle.png, residuals_fit_run04.png, omega_vs_mass.png
+
+**Reasons:** I am keeping the figures for run04 and run11 because they were both used for the AI runs. They make it really clear how important paddles are, as well as even making a point about masses. Earlier I commented on how larger masses means lower damping (because longer period, and less air that gets traveled through per second). The most damped had the largest paddle smallest mass, and vice versa. I also am keeping run15 because it is a very concise way to show error and noise without having to compare nearly identical runs (such as run01 or run05) Run15 also has the added bonus of allowing me to compare different masses with the same paddle and the same masses with different paddles. I am keeping gamma_vs_paddle.png because paddles were important to damping, and are extremely important to explain why AIs acted differently when told about a paddle. Residuals_fit_run04 shows why AIs had no issues fitting to run04 with a damped model, as the simple equation left serious residuals and shows why the equation has a damping factor at all. Omega vs mass is important for proving the idea that the period changes at all with mass as it isn't immediately obvious from just looking at the graphs.
+```
+
