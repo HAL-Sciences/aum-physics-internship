@@ -624,3 +624,14 @@ fit_run04.png, fit_run11.png, fit_run15.png, gamma_vs_paddle.png, residuals_fit_
 **Reasons:** I am keeping the figures for run04 and run11 because they were both used for the AI runs. They make it really clear how important paddles are, as well as even making a point about masses. Earlier I commented on how larger masses means lower damping (because longer period, and less air that gets traveled through per second). The most damped had the largest paddle smallest mass, and vice versa. I also am keeping run15 because it is a very concise way to show error and noise without having to compare nearly identical runs (such as run01 or run05) Run15 also has the added bonus of allowing me to compare different masses with the same paddle and the same masses with different paddles. I am keeping gamma_vs_paddle.png because paddles were important to damping, and are extremely important to explain why AIs acted differently when told about a paddle. Residuals_fit_run04 shows why AIs had no issues fitting to run04 with a damped model, as the simple equation left serious residuals and shows why the equation has a damping factor at all. Omega vs mass is important for proving the idea that the period changes at all with mass as it isn't immediately obvious from just looking at the graphs.
 ```
 
+```
+### August 18 — Beginning to write the report
+
+**Goal today:** Paste what I can from my notebook into final_report.md
+(What am I trying to do or find out?)
+
+**Notes:** Next to "gap" I wrote why there was a gap. I also used strikethroughs to note what I was able to pull from the notebook. I slightly rewrote things to make them more accruate/transition better (for example clarifying the sliding vs air friction thing from earlier).
+
+**Data / files I created:** report folder, report/final_report.md
+```
+
