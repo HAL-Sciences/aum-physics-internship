@@ -635,3 +635,13 @@ fit_run04.png, fit_run11.png, fit_run15.png, gamma_vs_paddle.png, residuals_fit_
 **Data / files I created:** report folder, report/final_report.md
 ```
 
+```
+### August 19 — Finishing dictionaries
+
+**Goal today:** Finish the Codecademy dictionary modules and putting the figures into final_report.md
+
+**What worked:** I successfully managed to add the figures into final_report.md. I also rewrote my explanation to work with less context. I finished the dictionaries module with no issues, including the project and optional things at the end of the project.
+
+**AI help today:** None
+```
+
