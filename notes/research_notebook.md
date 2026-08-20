@@ -642,6 +642,6 @@ fit_run04.png, fit_run11.png, fit_run15.png, gamma_vs_paddle.png, residuals_fit_
 
 **What worked:** I successfully managed to add the figures into final_report.md. I also rewrote my explanation to work with less context. I finished the dictionaries module with no issues, including the project and optional things at the end of the project.
 
-**AI help today:** None
+**AI help today:** I rewrote my explanation first myself. I then had ChatGPT look at the first version, write a clearer version of that, look at the second version, and use the clarity of the first with the information of the second to create a more ideal explanation. I then modified my lines where what I said could've been made clearer by following ChatGPT's version.
 ```
 
