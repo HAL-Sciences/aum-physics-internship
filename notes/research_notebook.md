@@ -645,3 +645,22 @@ fit_run04.png, fit_run11.png, fit_run15.png, gamma_vs_paddle.png, residuals_fit_
 **AI help today:** I rewrote my explanation first myself. I then had ChatGPT look at the first version, write a clearer version of that, look at the second version, and use the clarity of the first with the information of the second to create a more ideal explanation. I then modified my lines where what I said could've been made clearer by following ChatGPT's version.
 ```
 
+```
+### August 20 — Files
+
+**Goal today:** Complete the Codecademy files module and compare my paddles to gamma.
+
+**What I tried:**
+(Steps, in order. Be specific enough to repeat.)
+
+**What worked:** I swiftly completed the Codecademy files module with no issues. My code for the paddle and mass effect on gamma was very messy, but it worked. 
+
+**Observations:** I noticed that when plotting, the graphs for the first 2 mass groups appeared to show 2 separate lines, and the third showed a sharp dip because of differing gammas. I assumed this is because the frames were plotted by the order of the values, and the last one is the only time the same paddle sizes were next to each other. Overall the shapes did seem linear, even after I sorted the dataframes by paddle sizes. The last group had the largest offset, probably due to the weird tracking for run 15. It seemed slightly less linear with the final mass group compared to the others. I realized I should've made it a scatter plot, so I plotted them as scatter plots and found that indeed the data still looked quite linear with the last mass group being the weirdest.
+Mass group one had the closest constants by far. I imagine this is due to the fact that the estimate for the baseline damping I got was an average of 2 numbers, meaning it was likely to be more accurate. The other runs didn't get this, which may have been part of the reason their numbers varied so much. There were gaps with factors near 3 in some areas. My gammas were off by roughly .0016 between the runs 1 and 5, 0.0006 between runs 7 and run 10, and .005 between runs 14 and 15. The constants between runs 7 and 10 were off by about 0.07, and between runs 14 and 15 were off by also about 0.07. The constants seemed to trend upwards with paddle sizes overall in the numbers I got, suggesting the relationship may even be missing a factor related to paddle sizes, or something else (such as the baseline being off, as even a 0.001 difference matters a lot when the numbers are small enough). The constants did seem to hold with the first mass group better, potentially due to the baseline, but it is hard to come to a conclusion on why it might have been off for the other 2 groups.
+
+**What I changed:**
+
+**Data / files I created:** figures/gamma_vs_paddle_and_mass.png, experiment/measuring_paddle_and_mass_effect.py
+
+**AI help today:** none
+```

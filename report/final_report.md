@@ -45,7 +45,7 @@ accounted for. ~~State your uncertainty in gamma~~ and where it comes from._
 
 ![Figure 1: run04, raw data and damped fit](../figures/fit_run04.png)
 ![Figure 2: run11, raw data and damped fit](../figures/fit_run11.png)
-![Figure 3: run04, raw data and damped fit](../figures/fit_run15.png)
+![Figure 3: run15, raw data and damped fit](../figures/fit_run15.png)
 ![Figure 4: omega against mass](../figures/omega_vs_mass.png)
 ![Figure 5: gamma against paddle](../figures/gamma_vs_paddle.png)
 ![Figure 6: residuals, simple harmonic against damped](../figures/residuals_fit_run04.png)
@@ -53,29 +53,30 @@ accounted for. ~~State your uncertainty in gamma~~ and where it comes from._
 Table: fitted parameters, all runs 
 | run | A | gamma | omega | phi | C | mass_grams | paddle_inches |
 |---|---|---|---|---|---|---|---|
-| run01 | 3.864506528425202 | 0.007638259995106397 | 8.868637988112674 | -0.040566865183067964 | -2.8799534080200275 | 178 | 0 |
-| run02 | 4.3135050971649855 | 0.011985206227147261 | 8.844187572012746 | -2.8917571916275335 | -2.876449327973952 | 178 | 2 |
-| run03 | 4.309071464070233 | 0.026396105559290648 | 8.735829909103119 | -1.3715739015891453 | -3.088496214830344 | 178 | 4 | 
-| run04 | 2.972216399916491 | 0.05275184537335603 | 8.523898348608327 | 0.024327719412119326 | -3.368507585441482 | 178 | 6 |
-| run05 | -3.613344716495994 | 0.006035424994761652 | 8.928362354143568 | -0.48125502781603197 | -2.9209323968807204 | 178 | 0 |
-| run06 | -3.1079796667475574 | 0.004521683481783615 | 7.91007801145876 | -0.14536198270682324 | -4.235215801837623 | 230 | 0 |
-| run07 | 3.320131130661165 | 0.006854484909060425 | 7.881842905724974 | 0.6289036290720371 | -4.396110771136967 | 230 | 2 |
-| run08 | -3.2080864577003765 | 0.018280881392979148 | 7.772209077801825 | 1.1213293741742014 | -4.6055526196107675 | 230 | 4 |
-| run09 | 3.2655212835976437 | 0.042287079566147724 | 7.608505061000907 | 1.0639809563930964 | -4.938896071638403 | 230 | 6 |
-| run10 | -3.394304162670504 | 0.006255411409348167 | 7.873600951034485 | 0.9198028837294387 | -4.387837555759952 | 230 | 2 |
-| run11 | -3.5634161567027274 | 0.003423121470489022 | 7.316541582446483 | 1.4100710582224019 | -21.838790676552424 | 272 | 0 |
-| run12 | 3.185774300822344 | 0.0055575684164098395 | 7.293801253311689 | 2.4294495286360944 | -5.448331703445565 | 272 | 2 |
-| run13 | 3.6370070716041507 | 0.015825717322693156 | 7.193147689610562 | 2.7330276888804144 | -5.690938606304936 | 272 | 4 |
-| run14 | -3.9199897144691227 | 0.04044584514582836 | 7.060703330816897 | -0.16509905693293989 | -5.9656049355062875 | 272 | 6 |
-| run15 | -3.6172024754870673 | 0.03543324322949454 | 7.039249623365725 | 0.25721132593381474 | -22.081895568139267 | 272 | 6 |
+| run01 | 3.8645 | 0.0076 | 8.8686 | -0.0406 | -2.8800 | 178 | 0 |
+| run02 | 4.3135 | 0.0120 | 8.8442 | -2.8918 | -2.8764 | 178 | 2 |
+| run03 | 4.3091 | 0.0264 | 8.7358 | -1.3716 | -3.0885 | 178 | 4 | 
+| run04 | 2.9722 | 0.0528 | 8.5239 | 0.0243 | -3.3685 | 178 | 6 |
+| run05 | -3.6133 | 0.0060 | 8.9283 | -0.4813 | -2.9209 | 178 | 0 |
+| run06 | -3.1080 | 0.0045 | 7.9100 | -0.1454 | -4.2352 | 230 | 0 |
+| run07 | 3.3201 | 0.0069 | 7.8818 | 0.6289 | -4.3961 | 230 | 2 |
+| run08 | -3.2081 | 0.0183 | 7.7722 | 1.1213 | -4.6056 | 230 | 4 |
+| run09 | 3.2655 | 0.0423 | 7.6085 | 1.0640 | -4.9389 | 230 | 6 |
+| run10 | -3.3943 | 0.0063 | 7.8736 | 0.9198 | -4.3878 | 230 | 2 | 
+| run11 | -3.5634 | 0.0034 | 7.3165 | 1.4101 | -21.8388 | 272 | 0 | 
+| run12 | 3.1858 | 0.0056 | 7.2938 | 2.4294 | -5.4483 | 272 | 2 | 
+| run13 | 3.637 | 0.0158 | 7.1931 | 2.733 | -5.6909 | 272 | 4 | 
+| run14 | -3.92 | 0.0404 | 7.0607 | -0.1651 | -5.9656 | 272 | 6 |
+| run15 | -3.6172 | 0.0354 | 7.0392 | 0.2572 | -22.0819 | 272 | 6 | 
 
 
 Figure 1 depicts the graph of the data for run04. That data was fed to the models for 4 of the 8 prompts, and clearly displays the effects of the 6 in x 6 in paddle. Figure 2 depicts the graph of the data for run11, which was also fed to the models, in the other 4 prompts. This run had a high mass and no paddle, resulting in much less visible damping. This figures makes it clearer why the models didn't often include damping in their analysis of this run.
 Figure 3 depicts run15. This figure provides great comparisons between masses and paddles. The run that had the same paddle size as run04, and roughly the same mass as run11. There is a clear difference in damping caused by mass as the paddle sizes depicted with figures 1 and 3 are the same, yet the damping is lessened in figure 3. Similarly, in figure 2 and figure 3, the masses are nearly identical, yet there is visibly more damping in figure 3 suggesting that paddles matter. Figure 3 also shows the effect of errors in tracking, making some numbers appear odd.
 Figure 4 depicts how mass influences $\omega$ (omega), which follows the period equation ($T = 2\pi\sqrt{\frac{m}{k}}$). Period increases with mass, causing omega to decrease (as it is inversly proptional to period). Figure 5 is further proof that paddles seriously effect damping, as $\gamma$ (gamma) scales with paddle sizes quadratically. This is due to air resistance, with the effect of paddle dimensions being squared due to the fact that surface area matters, not side length.
 Figure 6 is there to show why there is a damping factor at all. It depicts the residuals when using a simple fit versus the more complicated fit for damped harmonic motion. When I plotted the graph of the simple model's residual, the residuals appeared to follow asymptotes similar to hyperbolas, slightly rotated. There is a moment in the middle where the swap between the predictions having a magnitude too low and too high is visible. I plotted the residual for the damped model and it looked like basically random noise that's only pattern was having highs and lows on somewhat regular intervals, though with almost random (small) magnitudes. The residuals look completely different because the simple model's residuals were just way larger.
-Omega decreased as masses increased, matching my earlier predictions. Omega decreasing, means a longer period (I misstyped this yesterday). This follows the period equation (which predicts that mass increases period). The omega values varied a decent bit in each mass group, but there is still a very clear trend line showing omega decreasing with mass. In the gamma verse paddle_size plot, it appears gamma increases with paddle sizes. It too varies a lot in each paddle group, with the sort of following a power curve, but it is unclear due to the fact there are only 4 sizes. Sizes 0 and 2 are pretty similar to each other, but by paddle size of 6, it becomes significantly clearer that paddles have a huge impact on gamma, meaning they increase decay rate as predicted.
-There is some uncertainty in the gamma and omega values. The gamma values in run 1 vs run 5 are 0.0014 away, and omega values are 0.06 away. These aren't the largest differences, but they are relatively big still. This is the uncertainty in gamma and how I got to it.
+Omega decreased as masses increased, matching my earlier predictions. Omega decreasing means a longer period. This follows the period equation (which predicts that mass increases period). The omega values varied a decent bit in each mass group, but there is still a very clear trend line showing omega decreasing with mass. In the gamma verse paddle_size plot, it appears gamma increases with paddle sizes. It too varies a lot in each paddle group, with the sort of following a power curve, but it is unclear due to the fact there are only 4 sizes. Sizes 0 and 2 are pretty similar to each other, but by paddle size of 6, it becomes significantly clearer that paddles have a huge impact on gamma, meaning they increase decay rate as predicted.
+There is some uncertainty in the gamma and omega values. The gamma values in run 1 vs run 5 are 0.0014 away, and omega values are 0.06 away. These aren't the largest differences, but they are relatively big still. The uncertainty in gamma is close to roughly 0.005 overall, as that is the gap in the gammas between runs 14 and 15.
+When comparing gamma to paddle size squared, instead the effect of paddle surface area can be seen. After adjusting the gamma values to remove the baseline gamma from the spring and masses, the gamma vs paddle size squared ratio appears to be quite linear. When accounting for mass, the relationship should have been $p_c = \tfrac{2*m*\omega_a}{size^2}$ where $p_c$ is paddle constant, $m$ is mass, $\omega_a$ is omega adjusted, and $size^2$ is paddle area. After following this equation, each paddle size should have a roughly equal constant, but instead I found that they only held for the smallest masses I tested. When working with bigger masses, each paddle seemed to have a random constant that didn't even hold between seemingly identical runs (like runs 7 and 10 having constants that were different by about 0.07 despite having the same mass and paddle size). It can't be known from just this data alone, but it is likelier that the paddle constants are similar and do follow that equation because they held for the only mass group where the baseline damping that I subtracted was an average of 2 numbers, meaning more precision. Another potential reason these numbers were off is because of the actual way air resistance works. Air resistance on a flat paddle is closer to being proportional to speed squared, but my assumptions are off the idea that air resistance is proportional to speed. These are good effective numbers, but not really exact physical constants.
 
 ## 5. Testing the models
 **Gap** Actual explanation of the prompts, the actual runs chosen, and the specific model of each model
