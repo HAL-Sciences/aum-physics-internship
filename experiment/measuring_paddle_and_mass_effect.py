@@ -54,6 +54,7 @@ plot_list([Runs11to15_sorted])
 plt.show()
 
 plot_list([Runs1to5_sorted, Runs6to10_sorted, Runs11to15_sorted])
+plt.legend(['Mass group 1', 'Mass group 2', 'Mass group 3'])
 plt.savefig('figures/gamma_vs_paddle_and_mass.png', dpi=200, bbox_inches='tight')
 plt.show()
 

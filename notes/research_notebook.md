@@ -663,3 +663,12 @@ Mass group one had the closest constants by far. I imagine this is due to the fa
 **AI help today:** none
 ```
 
+```
+### August 21 — Final report
+
+**Goal today:** Finish the remaining sections in the final report.
+
+**What worked:** I wrote everything that was necessary, though it was hard to get the wording to work well in a lot of areas. I also updated my figure from yesterday to have labels.
+
+**AI help today:** I wrote what I wanted to first, then asked ChatGPT to rewrite it to be clearer. I noticed it had a tendency to use larger words or assume something meant something it didn't, but the tool was still helpful for reordering things that felt out of place, whether it was a weirdly ordered sentence or weirdly ordered paragraph.
+```
