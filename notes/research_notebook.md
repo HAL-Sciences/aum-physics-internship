@@ -672,3 +672,12 @@ Mass group one had the closest constants by far. I imagine this is due to the fa
 
 **AI help today:** I wrote what I wanted to first, then asked ChatGPT to rewrite it to be clearer. I noticed it had a tendency to use larger words or assume something meant something it didn't, but the tool was still helpful for reordering things that felt out of place, whether it was a weirdly ordered sentence or weirdly ordered paragraph.
 ```
+
+```
+### August 24 — Updating final_report.md
+
+**Goal today:** Complete the Codecademy Classes module and update final_report.md
+
+**What worked:** I had no issues completing the Classes module. At first it felt weird, but eventually I got the hang of it. I updated final_report.md to fix some of the remaining problems it had.
+```
+

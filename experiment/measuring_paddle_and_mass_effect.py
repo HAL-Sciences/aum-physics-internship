@@ -55,7 +55,7 @@ plt.show()
 
 plot_list([Runs1to5_sorted, Runs6to10_sorted, Runs11to15_sorted])
 plt.legend(['Mass group 1', 'Mass group 2', 'Mass group 3'])
-plt.savefig('figures/gamma_vs_paddle_and_mass.png', dpi=200, bbox_inches='tight')
+# plt.savefig('figures/gamma_vs_paddle_and_mass.png', dpi=200, bbox_inches='tight')
 plt.show()
 
 paddle_guesses = []
@@ -85,7 +85,21 @@ for i in range(len(merged_data)):
     runs.append(i+1)
     dampings.append(damping)
 
+def percent_dif(constant_1, constant_2):
+    numerator = constant_1 - constant_2
+    if constant_1 >= constant_2:
+        denominator = constant_1
+    else:
+        numerator = -numerator
+        denominator = constant_2
+    return numerator/denominator
+    
 runs_to_check = [0,4,6,9,13,14]
 for i in runs_to_check:
     print("constant {p}, run {r}, damping adjusted {d}".format(p=paddle_guesses[i], r=runs[i], d=dampings[i]))
 
+errorM2 = percent_dif(list(fit_nums['gamma'])[6], list(fit_nums['gamma'])[9])
+errorM3 = percent_dif(list(fit_nums['gamma'])[-2], list(fit_nums['gamma'])[-1])
+
+print(errorM2)
+print(errorM3)
