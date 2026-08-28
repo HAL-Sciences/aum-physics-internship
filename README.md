@@ -1,41 +1,67 @@
-# Aum's Research Internship — Can AI Discover Physics?
+# Can AI Discover Physics from Observation?
 
-Welcome, Aum. This repo is **yours** — your guides, your data, and the code you'll
-write. Everything you build here becomes your public project page and goes on your
-résumé.
+**Aum Aggarwal · HAL Sciences Research Internship · 2026**
 
-## Start here
+Data, code, and write-up for a summer research project testing whether large
+language models can infer a physical law from real measurements — or whether
+they only recall laws they were trained on.
 
-0. **New to coding? Start with
-   [`handouts/intern/getting_started.md`](handouts/intern/getting_started.md)** —
-   it installs your tools and walks you to your first commit. Do it once, with your
-   dad. Any word you don't know is in
-   [`handouts/intern/glossary.md`](handouts/intern/glossary.md).
-1. Then open **[`handouts/intern/HANDOUT.md`](handouts/intern/HANDOUT.md)** — your
-   front-door guide to the whole internship. Read it once now, and come back
-   whenever you're not sure what to do next.
-2. It points you to deeper guides for each part as you reach them — building the
-   rig, learning Python, testing the AIs, and writing it all up.
+**[Read the final report →](report/final_report.md)**
 
-## What's in here
+## The experiment
+
+A mass hanging from a spring was pulled down four inches and released, filmed,
+and tracked frame by frame. Fifteen runs, crossing three masses (178 g, 230 g,
+272 g) with four foam paddle sizes (none, 2×2, 4×4, 6×6 inches) to vary air
+resistance. Position-versus-time data was extracted with Tracker and fitted in
+Python to the damped harmonic oscillator
 
 ```
-handouts/
-  intern/     your guides — start with HANDOUT.md
-experiment/
-  src/        where YOU write your Python analysis code (starts empty — it's yours)
-  data/       where your Tracker CSV files go (keep raw exports; never edit them)
-notes/        your research notebook lives here
+y(t) = A·e^(-γt)·cos(ωt + φ) + C
 ```
 
-## How we work
+Then two frontier models — ChatGPT 5.5 and Claude Opus 5 — were given the data
+from two of those runs under a four-rung prompt ladder that revealed
+progressively less about where the numbers came from, and scored on whether
+they reasoned from the data or pattern-matched to a law they already knew.
 
-- Keep a dated research **notebook** — see
-  [`handouts/intern/notebook_template.md`](handouts/intern/notebook_template.md).
-- Use AI **under the rules** —
-  [`handouts/intern/ai_use_rules.md`](handouts/intern/ai_use_rules.md):
-  hints before solutions, and never paste code you can't explain.
-- **When stuck:** try it yourself → ask an AI for a *hint* → ask Gaurav → ask your
-  dad. Being stuck a little while is normal and good — it's where the learning is.
+## The finding
 
-Let's find out whether a machine can discover what it was never taught!
+On the run with almost no visible damping, both models included a damping term
+under the one prompt that mentioned the paddles, and dropped it under the three
+that did not — working from identical numbers. The equation followed the
+framing rather than the evidence.
+
+## What's here
+
+```
+report/final_report.md    the write-up: 8 sections, 7 figures, 3 tables
+notes/                    dated research notebook kept through the project
+experiment/               analysis and LLM-evaluation code
+  data/                   per-run Tracker CSVs, fitted parameters, model answers
+  data/videos/            raw footage of all 15 runs
+figures/                  fitted curves, residuals, parameter plots
+Learning Coding and Practice/   Python exercises from the first weeks
+Sample Data/, Tracker First Run/   early practice data
+```
+
+Key scripts: `fitting_all_runs.py` (fits every run, writes `fitted_params.csv`
+and the figures) · `scatter_plots.py` and `measuring_paddle_and_mass_effect.py`
+(how mass and paddle area affect ω and γ) · `ask_gpt.py` / `ask_claude.py` (send
+the prompt ladder) · `comparing_to_AIs.py` (claimed versus fitted values).
+
+## Running the code
+
+```bash
+pip install -r requirements.txt
+```
+
+The LLM scripts read `ANTHROPIC_API_KEY` and `OPENAI_API_KEY` from a local
+`.env` — see `.env.example`. The fitting and plotting scripts need no keys.
+
+## Notes
+
+The internship's teaching materials are not part of this repository; some early
+commit messages refer to guides that lived here during the project. The
+commit history is otherwise the real record of the work, from first Python
+exercises in June to the finished report in August.
