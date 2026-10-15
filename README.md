@@ -21,16 +21,18 @@ y(t) = A·e^(-γt)·cos(ωt + φ) + C
 ```
 
 Then two frontier models — ChatGPT 5.5 and Claude Opus 5 — were given the data
-from two of those runs under a four-rung prompt ladder that revealed
-progressively less about where the numbers came from, and scored on whether
-they reasoned from the data or pattern-matched to a law they already knew.
+from two of those runs under four prompt conditions that varied the contextual
+detail, column labels, numerical precision, and request for confidence. Their
+answers were scored on whether they reasoned from the data or pattern-matched
+to a law they already knew.
 
 ## The finding
 
 On the run with almost no visible damping, both models included a damping term
 under the one prompt that mentioned the paddles, and dropped it under the three
-that did not — working from identical numbers. The equation followed the
-framing rather than the evidence.
+that did not — working from the same underlying run data. With only one answer
+per model and prompt, this does not establish a general rule, but it suggests
+that prompt framing influenced the models' equation choices.
 
 ## What's here
 
@@ -53,11 +55,29 @@ the prompt ladder) · `comparing_to_AIs.py` (claimed versus fitted values).
 ## Running the code
 
 ```bash
+python -m venv .venv
+# macOS/Linux: source .venv/bin/activate
+# Windows PowerShell: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+python experiment/fitting_all_runs.py
 ```
 
 The LLM scripts read `ANTHROPIC_API_KEY` and `OPENAI_API_KEY` from a local
-`.env` — see `.env.example`. The fitting and plotting scripts need no keys.
+`.env` — see `.env.example`. By default, those scripts perform a dry run and
+write ignored `*_answers_test.csv` files, so they cannot overwrite the saved
+results or incur API charges. Use `python experiment/ask_gpt.py --live` or
+`python experiment/ask_claude.py --live` to make live calls. The fitting and
+plotting scripts need no keys.
+
+Run commands from the repository root because the scripts use repository-relative
+paths. `fitting_all_runs.py` regenerates `experiment/data/fitted_params.csv` and
+the per-run fit figures.
+
+## Contributions
+
+Aum designed and ran the experiment, tracked and analyzed the data, wrote the
+analysis code, evaluated the model responses, and wrote the report. HAL Sciences
+provided mentorship and published the project through its internship program.
 
 ## Notes
 

@@ -1,11 +1,16 @@
+import argparse
 import pandas as pd
 from dotenv import load_dotenv
 import anthropic
 
 load_dotenv()
 
+parser = argparse.ArgumentParser(description='Run the four prompt conditions with Claude.')
+parser.add_argument('--live', action='store_true', help='Make paid API calls and replace claude_answers.csv.')
+args = parser.parse_args()
+
 model = "claude-opus-5" # different models and imports of course
-testing = True
+testing = not args.live
 
 if testing:
     client = None
@@ -66,7 +71,9 @@ for run in runs:
         run_list.append(run)
         answer_list.append(answer)
 dataframe = pd.DataFrame({'model':model_list, 'rung':rung_list, 'run':run_list, 'answer':answer_list})
-dataframe.to_csv('experiment/data/claude_answers.csv', index=False)
+output_file = 'experiment/data/claude_answers.csv' if args.live else 'experiment/data/claude_answers_test.csv'
+dataframe.to_csv(output_file, index=False)
+print('Saved answers to ' + output_file)
 
 # STEP 3: put the four lists into a DataFrame with columns model, rung, run,
 # answer, and save it as experiment/data/claude_answers.csv with no index.
