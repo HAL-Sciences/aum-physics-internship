@@ -5,7 +5,7 @@
 
 ## Abstract
 
-It is inconclusive to what extent AIs can actually reason through problems versus just reciting known results. I did an experiment where I measured the vertical displacement over time of a mass-spring system when pulled a consistent amount with varying masses and paddle sizes. The motion appeared to dampen following the equation for a damped harmonic oscillator: $y(t) = A e^{-\gamma t}\cos(\omega t + \phi) + C$. I had 2 AIs process the data for 2 of my runs and figure out the equations that fit the data to see if they can reason, which they did somewhat like humans. Both models included a damping term when the prompt mentioned paddles, but removed the term even with identical data when the prompt did not mention paddles.
+It is inconclusive to what extent AIs can actually reason through problems versus just reciting known results. I did an experiment where I measured the vertical displacement over time of a mass-spring system when pulled a consistent amount with varying masses and paddle sizes. The motion appeared to dampen following the equation for a damped harmonic oscillator: $y(t) = A e^{-\gamma t}\cos(\omega t + \phi) + C$. I had 2 AIs process the data for 2 of my runs and figure out the equations that fit the data to see if they can reason. In the lightly damped run, both models included a damping term when the prompt mentioned paddles but omitted it under the other prompt conditions. Because I collected only one answer per model and prompt, this result suggests that framing influenced model selection but does not establish that conclusion by itself.
 
 ## 1. The question
 

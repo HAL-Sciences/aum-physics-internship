@@ -68,7 +68,7 @@ for run_number in range (1,16):
     run_frames.append(run)
 all_fits = pd.DataFrame({'run':run_numbers, 'A':A, 'gamma':gamma, 'omega':omega,'phi':phi ,'C':C, 'mass_grams':masses, 'paddle_inches':paddles})
 # print(all_fits)
-# all_fits.to_csv('experiment/data/fitted_params.csv', index = False)
+all_fits.to_csv('experiment/data/fitted_params.csv', index = False)
 
 # print(all_fits.head(4)) # should print run 4 as roughly [ 2.97221638  0.05275184  8.52389841  0.02432687 -3.36850759]
 ##                                        actually prints [ 2.972216    0.052752    8.523898    0.024328   -3.368508]

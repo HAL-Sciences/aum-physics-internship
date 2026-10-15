@@ -1,4 +1,10 @@
-# Needed for experiment/verify_api_keys.py and Week 6's LLM evaluation.
+# Data analysis and plotting
+matplotlib
+numpy
+pandas
+scipy
+
+# LLM evaluation
 anthropic
 openai
 python-dotenv

@@ -70,7 +70,7 @@ for i in range(len(merged_data)):
     elif mass_key == 'M2':
         mass = 230
     elif mass_key == 'M3':
-        masss = 272
+        mass = 272
     else:
         print('Error on run', i+1)
         mass = 999999
